@@ -1,0 +1,24 @@
+{"level":"error","message":"Error: request aborted","service":"auth-service","timestamp":"2025-04-26 21:01:29"}
+{"level":"error","message":"Error: request aborted","service":"auth-service","timestamp":"2025-04-26 21:02:59"}
+{"level":"error","message":"Error: request aborted","service":"auth-service","timestamp":"2025-04-26 21:03:59"}
+{"level":"error","message":"Error: request aborted","service":"auth-service","timestamp":"2025-04-26 21:16:32"}
+{"level":"error","message":"Error: request aborted","service":"auth-service","timestamp":"2025-04-26 21:35:12"}
+{"level":"error","message":"Error: request aborted","service":"auth-service","timestamp":"2025-04-26 21:59:18"}
+{"level":"error","message":"Error: request aborted","service":"auth-service","timestamp":"2025-04-26 21:59:18"}
+{"level":"error","message":"Error: request aborted","service":"auth-service","timestamp":"2025-04-26 22:00:46"}
+{"level":"error","message":"Error: request aborted","service":"auth-service","timestamp":"2025-04-26 22:02:16"}
+{"level":"error","message":"Error: request aborted","service":"auth-service","timestamp":"2025-04-26 22:09:17"}
+{"level":"error","message":"Error: request aborted","service":"auth-service","timestamp":"2025-04-26 22:09:17"}
+{"level":"error","message":"Error: request aborted","service":"auth-service","timestamp":"2025-04-26 22:12:31"}
+{"level":"error","message":"Error: request aborted","service":"auth-service","timestamp":"2025-04-26 22:17:47"}
+{"level":"error","message":"Error: request aborted","service":"auth-service","timestamp":"2025-04-26 22:18:17"}
+{"level":"error","message":"Error: request aborted","service":"auth-service","timestamp":"2025-04-26 22:33:17"}
+{"level":"error","message":"Registration error: E11000 duplicate key error collection: test.users index: username_1 dup key: { username: null }","service":"auth-service","timestamp":"2025-04-26 23:08:28"}
+{"level":"error","message":"Registration error: E11000 duplicate key error collection: test.users index: username_1 dup key: { username: null }","service":"auth-service","timestamp":"2025-04-26 23:08:42"}
+{"level":"error","message":"Registration error: E11000 duplicate key error collection: test.users index: username_1 dup key: { username: null }","service":"auth-service","timestamp":"2025-04-26 23:09:14"}
+{"level":"error","message":"Registration error: E11000 duplicate key error collection: test.users index: username_1 dup key: { username: null }","service":"auth-service","timestamp":"2025-04-26 23:11:57"}
+{"level":"error","message":"Error registering with service: getaddrinfo ENOTFOUND restaurant-service","service":"auth-service","timestamp":"2025-04-27 22:38:10"}
+{"level":"error","message":"Error registering with service: getaddrinfo ENOTFOUND restaurant-service","service":"auth-service","timestamp":"2025-05-05 15:55:45"}
+{"level":"error","message":"Error registering with service: getaddrinfo ENOTFOUND restaurant-service","service":"auth-service","timestamp":"2025-05-05 21:42:41"}
+{"level":"error","message":"Authentication error: jwt expired","service":"auth-service","timestamp":"2025-05-10 11:18:31"}
+{"level":"error","message":"Authentication error: invalid signature","service":"auth-service","timestamp":"2025-05-10 08:16:42"}

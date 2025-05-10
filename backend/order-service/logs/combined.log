@@ -1,0 +1,192 @@
+{"level":"info","message":"Order service running on port 3003","service":"order-service","timestamp":"2025-04-27 12:33:19"}
+{"level":"info","message":"Connected to MongoDB","service":"order-service","timestamp":"2025-04-27 12:33:23"}
+{"level":"info","message":"POST /","service":"order-service","timestamp":"2025-04-27 12:51:52"}
+{"level":"error","message":"Create order error: Order validation failed: restaurantId: Cast to ObjectId failed for value \"1\" (type string) at path \"restaurantId\" because of \"BSONError\", items.0.menuItemId: Cast to ObjectId failed for value \"101[{\"name\":\"Size\",\"value\":\"Regular\"}]\" (type string) at path \"menuItemId\" because of \"BSONError\"","service":"order-service","timestamp":"2025-04-27 12:51:52"}
+{"level":"info","message":"POST /","service":"order-service","timestamp":"2025-04-27 12:53:06"}
+{"level":"info","message":"POST /","service":"order-service","timestamp":"2025-04-27 12:53:45"}
+{"level":"info","message":"GET /customer?page=1&limit=20","service":"order-service","timestamp":"2025-04-27 14:02:36"}
+{"level":"error","message":"Get order error: Cast to ObjectId failed for value \"customer\" (type string) at path \"_id\" for model \"Order\"","service":"order-service","timestamp":"2025-04-27 14:02:36"}
+{"level":"info","message":"GET /customer?page=1&limit=20","service":"order-service","timestamp":"2025-04-27 14:02:36"}
+{"level":"error","message":"Get order error: Cast to ObjectId failed for value \"customer\" (type string) at path \"_id\" for model \"Order\"","service":"order-service","timestamp":"2025-04-27 14:02:36"}
+{"level":"info","message":"GET /customer?status=pending&page=1&limit=20","service":"order-service","timestamp":"2025-04-27 14:02:39"}
+{"level":"error","message":"Get order error: Cast to ObjectId failed for value \"customer\" (type string) at path \"_id\" for model \"Order\"","service":"order-service","timestamp":"2025-04-27 14:02:39"}
+{"level":"info","message":"GET /customer?status=delivered&page=1&limit=20","service":"order-service","timestamp":"2025-04-27 14:02:40"}
+{"level":"error","message":"Get order error: Cast to ObjectId failed for value \"customer\" (type string) at path \"_id\" for model \"Order\"","service":"order-service","timestamp":"2025-04-27 14:02:40"}
+{"level":"info","message":"GET /customer?page=1&limit=20","service":"order-service","timestamp":"2025-04-27 14:02:41"}
+{"level":"error","message":"Get order error: Cast to ObjectId failed for value \"customer\" (type string) at path \"_id\" for model \"Order\"","service":"order-service","timestamp":"2025-04-27 14:02:41"}
+{"level":"info","message":"GET /customer?page=1&limit=20","service":"order-service","timestamp":"2025-04-27 14:03:15"}
+{"level":"error","message":"Get order error: Cast to ObjectId failed for value \"customer\" (type string) at path \"_id\" for model \"Order\"","service":"order-service","timestamp":"2025-04-27 14:03:15"}
+{"level":"info","message":"GET /customer?page=1&limit=20","service":"order-service","timestamp":"2025-04-27 14:03:15"}
+{"level":"error","message":"Get order error: Cast to ObjectId failed for value \"customer\" (type string) at path \"_id\" for model \"Order\"","service":"order-service","timestamp":"2025-04-27 14:03:15"}
+{"level":"info","message":"Order service running on port 3003","service":"order-service","timestamp":"2025-04-27 22:10:17"}
+{"level":"info","message":"Connected to MongoDB","service":"order-service","timestamp":"2025-04-27 22:10:18"}
+{"level":"info","message":"POST /","service":"order-service","timestamp":"2025-04-27 22:58:44"}
+{"level":"info","message":"POST /","service":"order-service","timestamp":"2025-04-27 23:00:11"}
+{"level":"info","message":"GET /customer?page=1&limit=20","service":"order-service","timestamp":"2025-04-27 23:04:09"}
+{"level":"error","message":"Get order error: Cast to ObjectId failed for value \"customer\" (type string) at path \"_id\" for model \"Order\"","service":"order-service","timestamp":"2025-04-27 23:04:09"}
+{"level":"info","message":"GET /customer?page=1&limit=20","service":"order-service","timestamp":"2025-04-27 23:04:09"}
+{"level":"error","message":"Get order error: Cast to ObjectId failed for value \"customer\" (type string) at path \"_id\" for model \"Order\"","service":"order-service","timestamp":"2025-04-27 23:04:09"}
+{"level":"info","message":"POST /","service":"order-service","timestamp":"2025-04-27 23:26:49"}
+{"level":"info","message":"POST /","service":"order-service","timestamp":"2025-04-27 23:27:22"}
+{"level":"error","message":"Failed to notify restaurant service: Invalid URL","service":"order-service","timestamp":"2025-04-27 23:27:23"}
+{"level":"info","message":"GET /customer?page=1&limit=20","service":"order-service","timestamp":"2025-04-27 23:27:43"}
+{"level":"error","message":"Get order error: Cast to ObjectId failed for value \"customer\" (type string) at path \"_id\" for model \"Order\"","service":"order-service","timestamp":"2025-04-27 23:27:43"}
+{"level":"info","message":"GET /customer?page=1&limit=20","service":"order-service","timestamp":"2025-04-27 23:27:43"}
+{"level":"error","message":"Get order error: Cast to ObjectId failed for value \"customer\" (type string) at path \"_id\" for model \"Order\"","service":"order-service","timestamp":"2025-04-27 23:27:43"}
+{"level":"info","message":"GET /680e7002d63dabd40efc3694","service":"order-service","timestamp":"2025-04-27 23:28:03"}
+{"level":"info","message":"GET /customer?page=1&limit=10","service":"order-service","timestamp":"2025-04-27 23:28:14"}
+{"level":"error","message":"Get order error: Cast to ObjectId failed for value \"customer\" (type string) at path \"_id\" for model \"Order\"","service":"order-service","timestamp":"2025-04-27 23:28:14"}
+{"level":"info","message":"POST /","service":"order-service","timestamp":"2025-04-27 23:29:13"}
+{"level":"error","message":"Failed to notify restaurant service: Invalid URL","service":"order-service","timestamp":"2025-04-27 23:29:13"}
+{"level":"info","message":"GET /customer?page=1&limit=10","service":"order-service","timestamp":"2025-04-27 23:29:25"}
+{"level":"error","message":"Get order error: Cast to ObjectId failed for value \"customer\" (type string) at path \"_id\" for model \"Order\"","service":"order-service","timestamp":"2025-04-27 23:29:25"}
+{"level":"info","message":"POST /","service":"order-service","timestamp":"2025-04-27 23:48:06"}
+{"level":"info","message":"GET /restaurant/680e01d2f4fd197e548bff1d?status=pending&page=1&limit=10","service":"order-service","timestamp":"2025-04-28 00:00:42"}
+{"level":"info","message":"POST /","service":"order-service","timestamp":"2025-04-28 00:01:18"}
+{"level":"info","message":"Order service running on port 3003","service":"order-service","timestamp":"2025-04-28 00:24:17"}
+{"level":"info","message":"Connected to MongoDB","service":"order-service","timestamp":"2025-04-28 00:24:18"}
+{"level":"info","message":"GET /nearby?latitude=6.9271&longitude=79.8612&maxDistance=5","service":"order-service","timestamp":"2025-04-28 00:34:59"}
+{"level":"error","message":"Get order error: Cast to ObjectId failed for value \"nearby\" (type string) at path \"_id\" for model \"Order\"","service":"order-service","timestamp":"2025-04-28 00:34:59"}
+{"level":"info","message":"POST /","service":"order-service","timestamp":"2025-04-28 00:41:54"}
+{"level":"info","message":"POST /","service":"order-service","timestamp":"2025-04-28 00:47:22"}
+{"level":"error","message":"Failed to notify restaurant service: Invalid URL","service":"order-service","timestamp":"2025-04-28 00:47:23"}
+{"level":"info","message":"POST /payments/process","service":"order-service","timestamp":"2025-04-28 00:47:23"}
+{"level":"info","message":"GET /customer?page=1&limit=10","service":"order-service","timestamp":"2025-04-28 00:48:23"}
+{"level":"error","message":"Get order error: Cast to ObjectId failed for value \"customer\" (type string) at path \"_id\" for model \"Order\"","service":"order-service","timestamp":"2025-04-28 00:48:23"}
+{"level":"info","message":"GET /restaurant/680e01d2f4fd197e548bff1d?status=pending&page=1&limit=10","service":"order-service","timestamp":"2025-04-28 00:48:44"}
+{"level":"info","message":"GET /restaurant/680ddf3dfe6473fffe5de8d0","service":"order-service","timestamp":"2025-04-28 01:06:37"}
+{"level":"info","message":"GET /restaurant/680ddf3dfe6473fffe5de8d0","service":"order-service","timestamp":"2025-04-28 01:06:37"}
+{"level":"info","message":"GET /restaurant/680ddf3dfe6473fffe5de8d0?status=pending","service":"order-service","timestamp":"2025-04-28 01:06:40"}
+{"level":"info","message":"GET /restaurant/680ddf3dfe6473fffe5de8d0","service":"order-service","timestamp":"2025-04-28 01:06:41"}
+{"level":"info","message":"GET /restaurant/680ddf3dfe6473fffe5de8d0","service":"order-service","timestamp":"2025-04-28 01:21:28"}
+{"level":"info","message":"GET /restaurant/680ddf3dfe6473fffe5de8d0","service":"order-service","timestamp":"2025-04-28 01:21:29"}
+{"level":"info","message":"GET /restaurant/680ddf3dfe6473fffe5de8d0","service":"order-service","timestamp":"2025-04-28 01:21:40"}
+{"level":"info","message":"GET /restaurant/680ddf3dfe6473fffe5de8d0","service":"order-service","timestamp":"2025-04-28 01:21:40"}
+{"level":"info","message":"POST /","service":"order-service","timestamp":"2025-04-28 01:23:56"}
+{"level":"info","message":"GET /restaurant/680ddf3dfe6473fffe5de8d0","service":"order-service","timestamp":"2025-04-28 01:24:21"}
+{"level":"info","message":"GET /restaurant/680ddf3dfe6473fffe5de8d0","service":"order-service","timestamp":"2025-04-28 01:24:21"}
+{"level":"info","message":"GET /restaurant/680ddf3dfe6473fffe5de8d0","service":"order-service","timestamp":"2025-04-28 01:24:24"}
+{"level":"info","message":"GET /restaurant/680ddf3dfe6473fffe5de8d0","service":"order-service","timestamp":"2025-04-28 01:24:24"}
+{"level":"info","message":"GET /restaurant/680e650a77c2d666fa801b23?status=pending&page=1&limit=10","service":"order-service","timestamp":"2025-04-28 01:24:33"}
+{"level":"info","message":"POST /","service":"order-service","timestamp":"2025-04-28 01:26:15"}
+{"level":"error","message":"Failed to notify restaurant service: Invalid URL","service":"order-service","timestamp":"2025-04-28 01:26:16"}
+{"level":"info","message":"GET /restaurant/680ddf3dfe6473fffe5de8d0","service":"order-service","timestamp":"2025-04-28 01:26:34"}
+{"level":"info","message":"GET /restaurant/680ddf3dfe6473fffe5de8d0","service":"order-service","timestamp":"2025-04-28 01:26:34"}
+{"level":"info","message":"GET /restaurant/680ddf3dfe6473fffe5de8d0?status=pending","service":"order-service","timestamp":"2025-04-28 01:26:36"}
+{"level":"info","message":"GET /restaurant/680ddf3dfe6473fffe5de8d0?status=confirmed","service":"order-service","timestamp":"2025-04-28 01:26:37"}
+{"level":"info","message":"GET /restaurant/680ddf3dfe6473fffe5de8d0?status=preparing","service":"order-service","timestamp":"2025-04-28 01:26:37"}
+{"level":"info","message":"GET /restaurant/680ddf3dfe6473fffe5de8d0?status=cancelled","service":"order-service","timestamp":"2025-04-28 01:26:38"}
+{"level":"info","message":"GET /restaurant/680ddf3dfe6473fffe5de8d0?status=delivered","service":"order-service","timestamp":"2025-04-28 01:26:39"}
+{"level":"info","message":"GET /restaurant/680ddf3dfe6473fffe5de8d0","service":"order-service","timestamp":"2025-04-28 01:26:40"}
+{"level":"info","message":"GET /restaurant/680ddf3dfe6473fffe5de8d0","service":"order-service","timestamp":"2025-04-28 01:26:43"}
+{"level":"info","message":"GET /restaurant/680ddf3dfe6473fffe5de8d0","service":"order-service","timestamp":"2025-04-28 01:26:43"}
+{"level":"info","message":"GET /restaurant/680ddf3dfe6473fffe5de8d0","service":"order-service","timestamp":"2025-04-28 01:26:47"}
+{"level":"info","message":"GET /restaurant/680ddf3dfe6473fffe5de8d0","service":"order-service","timestamp":"2025-04-28 01:26:47"}
+{"level":"info","message":"GET /restaurant/680e650a77c2d666fa801b23?status=pending&page=1&limit=10","service":"order-service","timestamp":"2025-04-28 01:27:24"}
+{"level":"info","message":"GET /restaurant/680ddf3dfe6473fffe5de8d0","service":"order-service","timestamp":"2025-04-28 01:27:57"}
+{"level":"info","message":"GET /restaurant/680ddf3dfe6473fffe5de8d0","service":"order-service","timestamp":"2025-04-28 01:27:57"}
+{"level":"info","message":"GET /restaurant/680ddf3dfe6473fffe5de8d0","service":"order-service","timestamp":"2025-04-28 01:28:00"}
+{"level":"info","message":"GET /restaurant/680ddf3dfe6473fffe5de8d0","service":"order-service","timestamp":"2025-04-28 01:28:00"}
+{"level":"info","message":"GET /restaurant/680e650a77c2d666fa801b23","service":"order-service","timestamp":"2025-04-28 01:31:13"}
+{"level":"info","message":"PATCH /680e8bdf950e6aa836f70041/status","service":"order-service","timestamp":"2025-04-28 01:32:30"}
+{"level":"info","message":"PATCH /680e8bdf950e6aa836f70041/status","service":"order-service","timestamp":"2025-04-28 01:33:04"}
+{"level":"info","message":"PATCH /680e8bdf950e6aa836f70041/status","service":"order-service","timestamp":"2025-04-28 01:33:11"}
+{"level":"info","message":"GET /restaurant/680e650a77c2d666fa801b23","service":"order-service","timestamp":"2025-04-28 01:33:17"}
+{"level":"info","message":"GET /restaurant/680e650a77c2d666fa801b23","service":"order-service","timestamp":"2025-04-28 01:39:52"}
+{"level":"info","message":"GET /restaurant/680e650a77c2d666fa801b23?status=ready_for_pickup","service":"order-service","timestamp":"2025-04-28 01:40:10"}
+{"level":"info","message":"GET /restaurant/680e650a77c2d666fa801b23","service":"order-service","timestamp":"2025-04-28 02:11:49"}
+{"level":"info","message":"GET /restaurant/680e650a77c2d666fa801b23","service":"order-service","timestamp":"2025-04-28 02:11:51"}
+{"level":"info","message":"PATCH /680e8bdf950e6aa836f70041/status","service":"order-service","timestamp":"2025-04-28 02:11:56"}
+{"level":"info","message":"GET /restaurant/680e650a77c2d666fa801b23","service":"order-service","timestamp":"2025-04-28 02:12:22"}
+{"level":"info","message":"GET /customer?page=1&limit=20","service":"order-service","timestamp":"2025-04-28 06:29:45"}
+{"level":"error","message":"Get order error: Cast to ObjectId failed for value \"customer\" (type string) at path \"_id\" for model \"Order\"","service":"order-service","timestamp":"2025-04-28 06:29:45"}
+{"level":"info","message":"GET /customer?page=1&limit=20","service":"order-service","timestamp":"2025-04-28 06:29:45"}
+{"level":"error","message":"Get order error: Cast to ObjectId failed for value \"customer\" (type string) at path \"_id\" for model \"Order\"","service":"order-service","timestamp":"2025-04-28 06:29:45"}
+{"level":"info","message":"POST /","service":"order-service","timestamp":"2025-04-28 06:30:00"}
+{"level":"error","message":"Failed to notify restaurant service: Invalid URL","service":"order-service","timestamp":"2025-04-28 06:30:01"}
+{"level":"info","message":"POST /payments/process","service":"order-service","timestamp":"2025-04-28 06:30:01"}
+{"level":"info","message":"POST /","service":"order-service","timestamp":"2025-04-28 06:30:10"}
+{"level":"error","message":"Failed to notify restaurant service: Invalid URL","service":"order-service","timestamp":"2025-04-28 06:30:10"}
+{"level":"info","message":"GET /customer?page=1&limit=20","service":"order-service","timestamp":"2025-04-28 06:30:33"}
+{"level":"error","message":"Get order error: Cast to ObjectId failed for value \"customer\" (type string) at path \"_id\" for model \"Order\"","service":"order-service","timestamp":"2025-04-28 06:30:33"}
+{"level":"info","message":"GET /customer?page=1&limit=20","service":"order-service","timestamp":"2025-04-28 06:30:33"}
+{"level":"error","message":"Get order error: Cast to ObjectId failed for value \"customer\" (type string) at path \"_id\" for model \"Order\"","service":"order-service","timestamp":"2025-04-28 06:30:33"}
+{"level":"info","message":"GET /680e8bdf950e6aa836f70041","service":"order-service","timestamp":"2025-04-28 06:44:00"}
+{"level":"info","message":"GET /customer?page=1&limit=20","service":"order-service","timestamp":"2025-04-28 06:45:08"}
+{"level":"error","message":"Get order error: Cast to ObjectId failed for value \"customer\" (type string) at path \"_id\" for model \"Order\"","service":"order-service","timestamp":"2025-04-28 06:45:08"}
+{"level":"info","message":"GET /customer?page=1&limit=20","service":"order-service","timestamp":"2025-04-28 06:45:08"}
+{"level":"error","message":"Get order error: Cast to ObjectId failed for value \"customer\" (type string) at path \"_id\" for model \"Order\"","service":"order-service","timestamp":"2025-04-28 06:45:08"}
+{"level":"info","message":"POST /","service":"order-service","timestamp":"2025-04-28 06:45:36"}
+{"level":"info","message":"POST /","service":"order-service","timestamp":"2025-04-28 06:46:13"}
+{"level":"error","message":"Failed to notify restaurant service: Invalid URL","service":"order-service","timestamp":"2025-04-28 06:46:13"}
+{"level":"info","message":"POST /","service":"order-service","timestamp":"2025-04-28 06:48:42"}
+{"level":"error","message":"Create order error: Order validation failed: items.0.menuItemId: Cast to ObjectId failed for value \"680e13a6f4fd197e548bff63nameTypevalueEgg\" (type string) at path \"menuItemId\" because of \"BSONError\"","service":"order-service","timestamp":"2025-04-28 06:48:42"}
+{"level":"info","message":"POST /","service":"order-service","timestamp":"2025-04-28 06:49:20"}
+{"level":"error","message":"Create order error: Order validation failed: items.0.menuItemId: Cast to ObjectId failed for value \"680e13a6f4fd197e548bff63nameTypevalueEgg\" (type string) at path \"menuItemId\" because of \"BSONError\"","service":"order-service","timestamp":"2025-04-28 06:49:20"}
+{"level":"info","message":"POST /","service":"order-service","timestamp":"2025-04-28 06:49:43"}
+{"level":"error","message":"Failed to notify restaurant service: Invalid URL","service":"order-service","timestamp":"2025-04-28 06:49:43"}
+{"level":"info","message":"POST /","service":"order-service","timestamp":"2025-04-28 19:31:32"}
+{"level":"error","message":"Failed to notify restaurant service: Invalid URL","service":"order-service","timestamp":"2025-04-28 19:31:33"}
+{"level":"info","message":"GET /customer?page=1&limit=20","service":"order-service","timestamp":"2025-04-28 19:37:16"}
+{"level":"error","message":"Get order error: Cast to ObjectId failed for value \"customer\" (type string) at path \"_id\" for model \"Order\"","service":"order-service","timestamp":"2025-04-28 19:37:16"}
+{"level":"info","message":"GET /ready-for-pickup","service":"order-service","timestamp":"2025-04-28 20:01:10"}
+{"level":"error","message":"Get order error: Cast to ObjectId failed for value \"ready-for-pickup\" (type string) at path \"_id\" for model \"Order\"","service":"order-service","timestamp":"2025-04-28 20:01:10"}
+{"level":"info","message":"POST /mock-1/accept","service":"order-service","timestamp":"2025-04-28 20:01:22"}
+{"level":"info","message":"GET /ready-for-pickup","service":"order-service","timestamp":"2025-04-28 20:01:50"}
+{"level":"error","message":"Get order error: Cast to ObjectId failed for value \"ready-for-pickup\" (type string) at path \"_id\" for model \"Order\"","service":"order-service","timestamp":"2025-04-28 20:01:50"}
+{"level":"info","message":"GET /ready-for-pickup","service":"order-service","timestamp":"2025-04-28 20:01:56"}
+{"level":"error","message":"Get order error: Cast to ObjectId failed for value \"ready-for-pickup\" (type string) at path \"_id\" for model \"Order\"","service":"order-service","timestamp":"2025-04-28 20:01:56"}
+{"level":"info","message":"POST /mock-1/accept","service":"order-service","timestamp":"2025-04-28 20:02:04"}
+{"level":"info","message":"GET /ready-for-pickup","service":"order-service","timestamp":"2025-04-28 21:11:48"}
+{"level":"error","message":"Get order error: Cast to ObjectId failed for value \"ready-for-pickup\" (type string) at path \"_id\" for model \"Order\"","service":"order-service","timestamp":"2025-04-28 21:11:48"}
+{"level":"info","message":"POST /mock-1/accept","service":"order-service","timestamp":"2025-04-28 21:11:53"}
+{"level":"info","message":"GET /restaurant/680e650a77c2d666fa801b23","service":"order-service","timestamp":"2025-04-28 21:13:40"}
+{"level":"info","message":"PATCH /680f8a3c950e6aa836f700a7/status","service":"order-service","timestamp":"2025-04-28 21:13:50"}
+{"level":"info","message":"GET /restaurant/680e650a77c2d666fa801b23?status=pending","service":"order-service","timestamp":"2025-04-28 21:13:54"}
+{"level":"info","message":"GET /restaurant/680e650a77c2d666fa801b23?status=confirmed","service":"order-service","timestamp":"2025-04-28 21:13:55"}
+{"level":"info","message":"GET /restaurant/680e650a77c2d666fa801b23?status=preparing","service":"order-service","timestamp":"2025-04-28 21:13:58"}
+{"level":"info","message":"GET /restaurant/680e650a77c2d666fa801b23?status=pending","service":"order-service","timestamp":"2025-04-28 21:13:59"}
+{"level":"info","message":"GET /restaurant/680e650a77c2d666fa801b23?status=preparing","service":"order-service","timestamp":"2025-04-28 21:14:06"}
+{"level":"info","message":"GET /restaurant/680e650a77c2d666fa801b23?status=confirmed","service":"order-service","timestamp":"2025-04-28 21:14:07"}
+{"level":"info","message":"GET /restaurant/680e650a77c2d666fa801b23?status=pending","service":"order-service","timestamp":"2025-04-28 21:14:08"}
+{"level":"info","message":"GET /restaurant/680e650a77c2d666fa801b23?status=confirmed","service":"order-service","timestamp":"2025-04-28 21:14:10"}
+{"level":"info","message":"PATCH /680e8bdf950e6aa836f70041/status","service":"order-service","timestamp":"2025-04-28 21:26:29"}
+{"level":"info","message":"GET /ready-for-pickup","service":"order-service","timestamp":"2025-04-28 21:27:41"}
+{"level":"error","message":"Get order error: Cast to ObjectId failed for value \"ready-for-pickup\" (type string) at path \"_id\" for model \"Order\"","service":"order-service","timestamp":"2025-04-28 21:27:41"}
+{"level":"info","message":"POST /mock-1/accept","service":"order-service","timestamp":"2025-04-28 21:27:46"}
+{"level":"info","message":"GET /ready-for-pickup","service":"order-service","timestamp":"2025-04-28 21:28:00"}
+{"level":"error","message":"Get order error: Cast to ObjectId failed for value \"ready-for-pickup\" (type string) at path \"_id\" for model \"Order\"","service":"order-service","timestamp":"2025-04-28 21:28:00"}
+{"level":"info","message":"POST /mock-1/accept","service":"order-service","timestamp":"2025-04-28 21:28:05"}
+{"level":"info","message":"GET /ready-for-pickup","service":"order-service","timestamp":"2025-04-28 21:49:01"}
+{"level":"error","message":"Get order error: Cast to ObjectId failed for value \"ready-for-pickup\" (type string) at path \"_id\" for model \"Order\"","service":"order-service","timestamp":"2025-04-28 21:49:01"}
+{"level":"info","message":"POST /mock-1/accept","service":"order-service","timestamp":"2025-04-28 21:49:08"}
+{"level":"info","message":"POST /mock-1/accept","service":"order-service","timestamp":"2025-04-28 21:49:14"}
+{"level":"info","message":"GET /ready-for-pickup","service":"order-service","timestamp":"2025-04-28 22:25:22"}
+{"level":"error","message":"Get order error: Cast to ObjectId failed for value \"ready-for-pickup\" (type string) at path \"_id\" for model \"Order\"","service":"order-service","timestamp":"2025-04-28 22:25:22"}
+{"level":"info","message":"GET /ready-for-pickup","service":"order-service","timestamp":"2025-04-28 22:46:34"}
+{"level":"error","message":"Get order error: Cast to ObjectId failed for value \"ready-for-pickup\" (type string) at path \"_id\" for model \"Order\"","service":"order-service","timestamp":"2025-04-28 22:46:34"}
+{"level":"info","message":"POST /mock-1/accept","service":"order-service","timestamp":"2025-04-28 22:46:39"}
+{"level":"info","message":"GET /customer?page=1&limit=20","service":"order-service","timestamp":"2025-04-28 22:49:04"}
+{"level":"error","message":"Get order error: Cast to ObjectId failed for value \"customer\" (type string) at path \"_id\" for model \"Order\"","service":"order-service","timestamp":"2025-04-28 22:49:04"}
+{"level":"info","message":"GET /restaurant/680e650a77c2d666fa801b23","service":"order-service","timestamp":"2025-04-28 22:53:27"}
+{"level":"info","message":"GET /restaurant/680e650a77c2d666fa801b23","service":"order-service","timestamp":"2025-04-28 22:54:40"}
+{"level":"info","message":"GET /customer?status=pending&page=1&limit=20","service":"order-service","timestamp":"2025-04-28 23:01:12"}
+{"level":"error","message":"Get order error: Cast to ObjectId failed for value \"customer\" (type string) at path \"_id\" for model \"Order\"","service":"order-service","timestamp":"2025-04-28 23:01:12"}
+{"level":"info","message":"GET /restaurant/680e650a77c2d666fa801b23","service":"order-service","timestamp":"2025-04-28 23:02:32"}
+{"level":"info","message":"POST /","service":"order-service","timestamp":"2025-04-28 23:06:54"}
+{"level":"error","message":"Failed to notify restaurant service: Invalid URL","service":"order-service","timestamp":"2025-04-28 23:06:54"}
+{"level":"info","message":"GET /restaurant/680e650a77c2d666fa801b23","service":"order-service","timestamp":"2025-04-28 23:07:55"}
+{"level":"info","message":"Order service running on port 3004","service":"order-service","timestamp":"2025-05-05 22:55:17"}
+{"level":"info","message":"Connected to MongoDB","service":"order-service","timestamp":"2025-05-05 22:55:20"}
+{"level":"info","message":"Order service running on port 3004","service":"order-service","timestamp":"2025-05-10 11:18:01"}
+{"level":"info","message":"Connected to MongoDB","service":"order-service","timestamp":"2025-05-10 11:18:03"}
+{"level":"info","message":"Order service running on port 3004","service":"order-service","timestamp":"2025-05-10 07:56:20"}
+{"level":"info","message":"Connected to MongoDB","service":"order-service","timestamp":"2025-05-10 07:56:25"}
+{"level":"info","message":"Order service running on port 3004","service":"order-service","timestamp":"2025-05-10 07:57:16"}
+{"level":"info","message":"Connected to MongoDB","service":"order-service","timestamp":"2025-05-10 07:57:17"}
+{"level":"info","message":"Order service running on port 3004","service":"order-service","timestamp":"2025-05-10 08:15:26"}
+{"level":"info","message":"Connected to MongoDB","service":"order-service","timestamp":"2025-05-10 08:15:27"}
+{"level":"info","message":"Order service running on port 3004","service":"order-service","timestamp":"2025-05-10 08:23:31"}
+{"level":"info","message":"Connected to MongoDB","service":"order-service","timestamp":"2025-05-10 08:23:32"}
+{"level":"info","message":"Order service running on port 3004","service":"order-service","timestamp":"2025-05-10 08:25:24"}
+{"level":"info","message":"Connected to MongoDB","service":"order-service","timestamp":"2025-05-10 08:25:26"}

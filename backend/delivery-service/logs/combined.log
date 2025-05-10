@@ -1,0 +1,96 @@
+{"level":"info","message":"Delivery Service running on port 3004","service":"delivery-service","timestamp":"2025-04-26 23:14:40"}
+{"level":"info","message":"Connected to MongoDB","service":"delivery-service","timestamp":"2025-04-26 23:14:41"}
+{"level":"info","message":"Delivery Service running on port 3004","service":"delivery-service","timestamp":"2025-04-26 23:15:02"}
+{"level":"info","message":"Connected to MongoDB","service":"delivery-service","timestamp":"2025-04-26 23:15:03"}
+{"level":"warn","message":"Route not found: GET /delivery","service":"delivery-service","timestamp":"2025-04-26 23:16:10"}
+{"level":"info","message":"::1 - - [26/Apr/2025:17:46:10 +0000] \"GET /delivery HTTP/1.1\" 404 29 \"-\" \"PostmanRuntime/7.43.3\"","service":"delivery-service","timestamp":"2025-04-26 23:16:10"}
+{"level":"warn","message":"Route not found: GET /delivery/deliveries","service":"delivery-service","timestamp":"2025-04-26 23:17:06"}
+{"level":"info","message":"::1 - - [26/Apr/2025:17:47:06 +0000] \"GET /delivery/deliveries HTTP/1.1\" 404 29 \"-\" \"PostmanRuntime/7.43.3\"","service":"delivery-service","timestamp":"2025-04-26 23:17:06"}
+{"level":"warn","message":"Route not found: GET /delivery/deliveries","service":"delivery-service","timestamp":"2025-04-26 23:17:09"}
+{"level":"info","message":"::1 - - [26/Apr/2025:17:47:09 +0000] \"GET /delivery/deliveries HTTP/1.1\" 404 29 \"-\" \"PostmanRuntime/7.43.3\"","service":"delivery-service","timestamp":"2025-04-26 23:17:09"}
+{"level":"warn","message":"Route not found: GET /delivery/deliveries","service":"delivery-service","timestamp":"2025-04-26 23:18:22"}
+{"level":"info","message":"::1 - - [26/Apr/2025:17:48:22 +0000] \"GET /delivery/deliveries HTTP/1.1\" 404 29 \"-\" \"PostmanRuntime/7.43.3\"","service":"delivery-service","timestamp":"2025-04-26 23:18:22"}
+{"level":"info","message":"::1 - - [26/Apr/2025:17:50:06 +0000] \"GET /deliveries HTTP/1.1\" 200 72 \"-\" \"PostmanRuntime/7.43.3\"","service":"delivery-service","timestamp":"2025-04-26 23:20:06"}
+{"level":"info","message":"::1 - - [26/Apr/2025:17:50:17 +0000] \"GET /deliveries HTTP/1.1\" 200 72 \"-\" \"PostmanRuntime/7.43.3\"","service":"delivery-service","timestamp":"2025-04-26 23:20:17"}
+{"level":"info","message":"Delivery Service running on port 3004","service":"delivery-service","timestamp":"2025-04-27 12:08:58"}
+{"level":"info","message":"Connected to MongoDB","service":"delivery-service","timestamp":"2025-04-27 12:09:04"}
+{"level":"info","message":"::1 - - [27/Apr/2025:06:43:47 +0000] \"GET /health HTTP/1.1\" 200 55 \"-\" \"PostmanRuntime/7.43.3\"","service":"delivery-service","timestamp":"2025-04-27 12:13:47"}
+{"level":"warn","message":"Route not found: POST /personnel/register","service":"delivery-service","timestamp":"2025-04-27 12:14:00"}
+{"level":"info","message":"::1 - - [27/Apr/2025:06:44:00 +0000] \"POST /personnel/register HTTP/1.1\" 404 29 \"-\" \"PostmanRuntime/7.43.3\"","service":"delivery-service","timestamp":"2025-04-27 12:14:00"}
+{"level":"info","message":"::1 - - [27/Apr/2025:10:43:53 +0000] \"GET /deliveries HTTP/1.1\" 200 72 \"-\" \"PostmanRuntime/7.43.3\"","service":"delivery-service","timestamp":"2025-04-27 16:13:53"}
+{"level":"info","message":"::1 - - [27/Apr/2025:10:44:39 +0000] \"GET /deliveries HTTP/1.1\" 200 72 \"-\" \"PostmanRuntime/7.43.3\"","service":"delivery-service","timestamp":"2025-04-27 16:14:39"}
+{"level":"info","message":"Delivery Service running on port 3004","service":"delivery-service","timestamp":"2025-04-27 22:10:11"}
+{"level":"info","message":"Connected to MongoDB","service":"delivery-service","timestamp":"2025-04-27 22:10:12"}
+{"level":"info","message":"Delivery Service running on port 3004","service":"delivery-service","timestamp":"2025-04-28 00:24:11"}
+{"level":"info","message":"Connected to MongoDB","service":"delivery-service","timestamp":"2025-04-28 00:24:12"}
+{"level":"info","message":"::1 - - [27/Apr/2025:19:03:55 +0000] \"GET /deliveries HTTP/1.1\" 200 72 \"-\" \"PostmanRuntime/7.43.3\"","service":"delivery-service","timestamp":"2025-04-28 00:33:55"}
+{"level":"info","message":"Delivery Service running on port 3004","service":"delivery-service","timestamp":"2025-04-28 06:32:15"}
+{"level":"info","message":"Connected to MongoDB","service":"delivery-service","timestamp":"2025-04-28 06:32:17"}
+{"level":"info","message":"Delivery Service running on port 3004","service":"delivery-service","timestamp":"2025-05-10 08:15:26"}
+{"level":"info","message":"Connected to MongoDB","service":"delivery-service","timestamp":"2025-05-10 08:15:27"}
+{"level":"info","message":"::1 - - [10/May/2025:08:15:29 +0000] \"GET /health HTTP/1.1\" 200 55 \"-\" \"Wget\"","service":"delivery-service","timestamp":"2025-05-10 08:15:29"}
+{"level":"info","message":"::1 - - [10/May/2025:08:15:59 +0000] \"GET /health HTTP/1.1\" 200 55 \"-\" \"Wget\"","service":"delivery-service","timestamp":"2025-05-10 08:15:59"}
+{"level":"info","message":"::1 - - [10/May/2025:08:16:30 +0000] \"GET /health HTTP/1.1\" 200 55 \"-\" \"Wget\"","service":"delivery-service","timestamp":"2025-05-10 08:16:30"}
+{"level":"info","message":"::1 - - [10/May/2025:08:17:00 +0000] \"GET /health HTTP/1.1\" 200 55 \"-\" \"Wget\"","service":"delivery-service","timestamp":"2025-05-10 08:17:00"}
+{"level":"info","message":"::1 - - [10/May/2025:08:17:30 +0000] \"GET /health HTTP/1.1\" 200 55 \"-\" \"Wget\"","service":"delivery-service","timestamp":"2025-05-10 08:17:30"}
+{"level":"info","message":"::1 - - [10/May/2025:08:18:00 +0000] \"GET /health HTTP/1.1\" 200 55 \"-\" \"Wget\"","service":"delivery-service","timestamp":"2025-05-10 08:18:00"}
+{"level":"info","message":"::1 - - [10/May/2025:08:18:30 +0000] \"GET /health HTTP/1.1\" 200 55 \"-\" \"Wget\"","service":"delivery-service","timestamp":"2025-05-10 08:18:30"}
+{"level":"info","message":"::1 - - [10/May/2025:08:19:00 +0000] \"GET /health HTTP/1.1\" 200 55 \"-\" \"Wget\"","service":"delivery-service","timestamp":"2025-05-10 08:19:00"}
+{"level":"info","message":"::1 - - [10/May/2025:08:19:30 +0000] \"GET /health HTTP/1.1\" 200 55 \"-\" \"Wget\"","service":"delivery-service","timestamp":"2025-05-10 08:19:30"}
+{"level":"info","message":"::1 - - [10/May/2025:08:20:00 +0000] \"GET /health HTTP/1.1\" 200 55 \"-\" \"Wget\"","service":"delivery-service","timestamp":"2025-05-10 08:20:00"}
+{"level":"info","message":"::1 - - [10/May/2025:08:20:30 +0000] \"GET /health HTTP/1.1\" 200 55 \"-\" \"Wget\"","service":"delivery-service","timestamp":"2025-05-10 08:20:30"}
+{"level":"info","message":"::1 - - [10/May/2025:08:21:00 +0000] \"GET /health HTTP/1.1\" 200 55 \"-\" \"Wget\"","service":"delivery-service","timestamp":"2025-05-10 08:21:00"}
+{"level":"info","message":"::1 - - [10/May/2025:08:21:30 +0000] \"GET /health HTTP/1.1\" 200 55 \"-\" \"Wget\"","service":"delivery-service","timestamp":"2025-05-10 08:21:30"}
+{"level":"info","message":"::1 - - [10/May/2025:08:22:00 +0000] \"GET /health HTTP/1.1\" 200 55 \"-\" \"Wget\"","service":"delivery-service","timestamp":"2025-05-10 08:22:00"}
+{"level":"info","message":"::1 - - [10/May/2025:08:22:30 +0000] \"GET /health HTTP/1.1\" 200 55 \"-\" \"Wget\"","service":"delivery-service","timestamp":"2025-05-10 08:22:30"}
+{"level":"info","message":"::1 - - [10/May/2025:08:23:01 +0000] \"GET /health HTTP/1.1\" 200 55 \"-\" \"Wget\"","service":"delivery-service","timestamp":"2025-05-10 08:23:01"}
+{"level":"info","message":"Delivery Service running on port 3004","service":"delivery-service","timestamp":"2025-05-10 08:23:31"}
+{"level":"info","message":"Connected to MongoDB","service":"delivery-service","timestamp":"2025-05-10 08:23:33"}
+{"level":"info","message":"::1 - - [10/May/2025:08:23:34 +0000] \"GET /health HTTP/1.1\" 200 55 \"-\" \"Wget\"","service":"delivery-service","timestamp":"2025-05-10 08:23:34"}
+{"level":"info","message":"::1 - - [10/May/2025:08:24:04 +0000] \"GET /health HTTP/1.1\" 200 55 \"-\" \"Wget\"","service":"delivery-service","timestamp":"2025-05-10 08:24:04"}
+{"level":"info","message":"::1 - - [10/May/2025:08:24:34 +0000] \"GET /health HTTP/1.1\" 200 55 \"-\" \"Wget\"","service":"delivery-service","timestamp":"2025-05-10 08:24:34"}
+{"level":"info","message":"::1 - - [10/May/2025:08:25:04 +0000] \"GET /health HTTP/1.1\" 200 55 \"-\" \"Wget\"","service":"delivery-service","timestamp":"2025-05-10 08:25:04"}
+{"level":"info","message":"Delivery Service running on port 3004","service":"delivery-service","timestamp":"2025-05-10 08:25:24"}
+{"level":"info","message":"Connected to MongoDB","service":"delivery-service","timestamp":"2025-05-10 08:25:26"}
+{"level":"info","message":"::1 - - [10/May/2025:08:25:27 +0000] \"GET /health HTTP/1.1\" 200 55 \"-\" \"Wget\"","service":"delivery-service","timestamp":"2025-05-10 08:25:27"}
+{"level":"info","message":"::1 - - [10/May/2025:08:25:57 +0000] \"GET /health HTTP/1.1\" 200 55 \"-\" \"Wget\"","service":"delivery-service","timestamp":"2025-05-10 08:25:57"}
+{"level":"info","message":"::1 - - [10/May/2025:08:26:27 +0000] \"GET /health HTTP/1.1\" 200 55 \"-\" \"Wget\"","service":"delivery-service","timestamp":"2025-05-10 08:26:27"}
+{"level":"info","message":"::1 - - [10/May/2025:08:26:57 +0000] \"GET /health HTTP/1.1\" 200 55 \"-\" \"Wget\"","service":"delivery-service","timestamp":"2025-05-10 08:26:57"}
+{"level":"info","message":"::1 - - [10/May/2025:08:27:27 +0000] \"GET /health HTTP/1.1\" 200 55 \"-\" \"Wget\"","service":"delivery-service","timestamp":"2025-05-10 08:27:27"}
+{"level":"info","message":"::1 - - [10/May/2025:08:27:57 +0000] \"GET /health HTTP/1.1\" 200 55 \"-\" \"Wget\"","service":"delivery-service","timestamp":"2025-05-10 08:27:57"}
+{"level":"info","message":"::1 - - [10/May/2025:08:28:27 +0000] \"GET /health HTTP/1.1\" 200 55 \"-\" \"Wget\"","service":"delivery-service","timestamp":"2025-05-10 08:28:27"}
+{"level":"info","message":"::1 - - [10/May/2025:08:28:58 +0000] \"GET /health HTTP/1.1\" 200 55 \"-\" \"Wget\"","service":"delivery-service","timestamp":"2025-05-10 08:28:58"}
+{"level":"info","message":"::1 - - [10/May/2025:08:29:28 +0000] \"GET /health HTTP/1.1\" 200 55 \"-\" \"Wget\"","service":"delivery-service","timestamp":"2025-05-10 08:29:28"}
+{"level":"info","message":"::1 - - [10/May/2025:08:29:58 +0000] \"GET /health HTTP/1.1\" 200 55 \"-\" \"Wget\"","service":"delivery-service","timestamp":"2025-05-10 08:29:58"}
+{"level":"info","message":"::1 - - [10/May/2025:08:30:28 +0000] \"GET /health HTTP/1.1\" 200 55 \"-\" \"Wget\"","service":"delivery-service","timestamp":"2025-05-10 08:30:28"}
+{"level":"info","message":"::1 - - [10/May/2025:08:30:58 +0000] \"GET /health HTTP/1.1\" 200 55 \"-\" \"Wget\"","service":"delivery-service","timestamp":"2025-05-10 08:30:58"}
+{"level":"info","message":"::1 - - [10/May/2025:08:31:28 +0000] \"GET /health HTTP/1.1\" 200 55 \"-\" \"Wget\"","service":"delivery-service","timestamp":"2025-05-10 08:31:28"}
+{"level":"info","message":"::1 - - [10/May/2025:08:31:58 +0000] \"GET /health HTTP/1.1\" 200 55 \"-\" \"Wget\"","service":"delivery-service","timestamp":"2025-05-10 08:31:58"}
+{"level":"info","message":"::1 - - [10/May/2025:08:32:28 +0000] \"GET /health HTTP/1.1\" 200 55 \"-\" \"Wget\"","service":"delivery-service","timestamp":"2025-05-10 08:32:28"}
+{"level":"info","message":"::1 - - [10/May/2025:08:32:58 +0000] \"GET /health HTTP/1.1\" 200 55 \"-\" \"Wget\"","service":"delivery-service","timestamp":"2025-05-10 08:32:58"}
+{"level":"info","message":"::1 - - [10/May/2025:08:33:28 +0000] \"GET /health HTTP/1.1\" 200 55 \"-\" \"Wget\"","service":"delivery-service","timestamp":"2025-05-10 08:33:28"}
+{"level":"info","message":"::1 - - [10/May/2025:08:33:58 +0000] \"GET /health HTTP/1.1\" 200 55 \"-\" \"Wget\"","service":"delivery-service","timestamp":"2025-05-10 08:33:58"}
+{"level":"info","message":"::1 - - [10/May/2025:08:34:28 +0000] \"GET /health HTTP/1.1\" 200 55 \"-\" \"Wget\"","service":"delivery-service","timestamp":"2025-05-10 08:34:28"}
+{"level":"info","message":"::1 - - [10/May/2025:08:34:58 +0000] \"GET /health HTTP/1.1\" 200 55 \"-\" \"Wget\"","service":"delivery-service","timestamp":"2025-05-10 08:34:58"}
+{"level":"info","message":"::1 - - [10/May/2025:08:35:28 +0000] \"GET /health HTTP/1.1\" 200 55 \"-\" \"Wget\"","service":"delivery-service","timestamp":"2025-05-10 08:35:28"}
+{"level":"info","message":"::1 - - [10/May/2025:08:35:58 +0000] \"GET /health HTTP/1.1\" 200 55 \"-\" \"Wget\"","service":"delivery-service","timestamp":"2025-05-10 08:35:58"}
+{"level":"info","message":"::1 - - [10/May/2025:08:36:28 +0000] \"GET /health HTTP/1.1\" 200 55 \"-\" \"Wget\"","service":"delivery-service","timestamp":"2025-05-10 08:36:28"}
+{"level":"info","message":"::1 - - [10/May/2025:08:36:58 +0000] \"GET /health HTTP/1.1\" 200 55 \"-\" \"Wget\"","service":"delivery-service","timestamp":"2025-05-10 08:36:58"}
+{"level":"info","message":"::1 - - [10/May/2025:08:37:28 +0000] \"GET /health HTTP/1.1\" 200 55 \"-\" \"Wget\"","service":"delivery-service","timestamp":"2025-05-10 08:37:28"}
+{"level":"info","message":"::1 - - [10/May/2025:08:37:58 +0000] \"GET /health HTTP/1.1\" 200 55 \"-\" \"Wget\"","service":"delivery-service","timestamp":"2025-05-10 08:37:58"}
+{"level":"info","message":"::1 - - [10/May/2025:08:38:29 +0000] \"GET /health HTTP/1.1\" 200 55 \"-\" \"Wget\"","service":"delivery-service","timestamp":"2025-05-10 08:38:29"}
+{"level":"info","message":"::1 - - [10/May/2025:08:38:59 +0000] \"GET /health HTTP/1.1\" 200 55 \"-\" \"Wget\"","service":"delivery-service","timestamp":"2025-05-10 08:38:59"}
+{"level":"info","message":"::1 - - [10/May/2025:08:39:29 +0000] \"GET /health HTTP/1.1\" 200 55 \"-\" \"Wget\"","service":"delivery-service","timestamp":"2025-05-10 08:39:29"}
+{"level":"info","message":"::1 - - [10/May/2025:08:39:59 +0000] \"GET /health HTTP/1.1\" 200 55 \"-\" \"Wget\"","service":"delivery-service","timestamp":"2025-05-10 08:39:59"}
+{"level":"info","message":"::1 - - [10/May/2025:08:40:29 +0000] \"GET /health HTTP/1.1\" 200 55 \"-\" \"Wget\"","service":"delivery-service","timestamp":"2025-05-10 08:40:29"}
+{"level":"info","message":"::1 - - [10/May/2025:08:40:59 +0000] \"GET /health HTTP/1.1\" 200 55 \"-\" \"Wget\"","service":"delivery-service","timestamp":"2025-05-10 08:40:59"}
+{"level":"info","message":"::1 - - [10/May/2025:08:41:29 +0000] \"GET /health HTTP/1.1\" 200 55 \"-\" \"Wget\"","service":"delivery-service","timestamp":"2025-05-10 08:41:29"}
+{"level":"info","message":"::1 - - [10/May/2025:08:41:59 +0000] \"GET /health HTTP/1.1\" 200 55 \"-\" \"Wget\"","service":"delivery-service","timestamp":"2025-05-10 08:41:59"}
+{"level":"info","message":"::1 - - [10/May/2025:08:42:29 +0000] \"GET /health HTTP/1.1\" 200 55 \"-\" \"Wget\"","service":"delivery-service","timestamp":"2025-05-10 08:42:29"}
+{"level":"info","message":"::1 - - [10/May/2025:08:42:59 +0000] \"GET /health HTTP/1.1\" 200 55 \"-\" \"Wget\"","service":"delivery-service","timestamp":"2025-05-10 08:42:59"}
+{"level":"info","message":"::1 - - [10/May/2025:08:43:29 +0000] \"GET /health HTTP/1.1\" 200 55 \"-\" \"Wget\"","service":"delivery-service","timestamp":"2025-05-10 08:43:29"}
+{"level":"info","message":"::1 - - [10/May/2025:08:43:59 +0000] \"GET /health HTTP/1.1\" 200 55 \"-\" \"Wget\"","service":"delivery-service","timestamp":"2025-05-10 08:43:59"}
+{"level":"info","message":"::1 - - [10/May/2025:08:44:29 +0000] \"GET /health HTTP/1.1\" 200 55 \"-\" \"Wget\"","service":"delivery-service","timestamp":"2025-05-10 08:44:29"}
+{"level":"info","message":"::1 - - [10/May/2025:08:45:00 +0000] \"GET /health HTTP/1.1\" 200 55 \"-\" \"Wget\"","service":"delivery-service","timestamp":"2025-05-10 08:45:00"}
+{"level":"info","message":"::1 - - [10/May/2025:08:45:30 +0000] \"GET /health HTTP/1.1\" 200 55 \"-\" \"Wget\"","service":"delivery-service","timestamp":"2025-05-10 08:45:30"}
+{"level":"info","message":"::1 - - [10/May/2025:08:46:00 +0000] \"GET /health HTTP/1.1\" 200 55 \"-\" \"Wget\"","service":"delivery-service","timestamp":"2025-05-10 08:46:00"}

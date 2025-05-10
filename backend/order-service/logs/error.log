@@ -1,0 +1,46 @@
+{"level":"error","message":"Create order error: Order validation failed: restaurantId: Cast to ObjectId failed for value \"1\" (type string) at path \"restaurantId\" because of \"BSONError\", items.0.menuItemId: Cast to ObjectId failed for value \"101[{\"name\":\"Size\",\"value\":\"Regular\"}]\" (type string) at path \"menuItemId\" because of \"BSONError\"","service":"order-service","timestamp":"2025-04-27 12:51:52"}
+{"level":"error","message":"Get order error: Cast to ObjectId failed for value \"customer\" (type string) at path \"_id\" for model \"Order\"","service":"order-service","timestamp":"2025-04-27 14:02:36"}
+{"level":"error","message":"Get order error: Cast to ObjectId failed for value \"customer\" (type string) at path \"_id\" for model \"Order\"","service":"order-service","timestamp":"2025-04-27 14:02:36"}
+{"level":"error","message":"Get order error: Cast to ObjectId failed for value \"customer\" (type string) at path \"_id\" for model \"Order\"","service":"order-service","timestamp":"2025-04-27 14:02:39"}
+{"level":"error","message":"Get order error: Cast to ObjectId failed for value \"customer\" (type string) at path \"_id\" for model \"Order\"","service":"order-service","timestamp":"2025-04-27 14:02:40"}
+{"level":"error","message":"Get order error: Cast to ObjectId failed for value \"customer\" (type string) at path \"_id\" for model \"Order\"","service":"order-service","timestamp":"2025-04-27 14:02:41"}
+{"level":"error","message":"Get order error: Cast to ObjectId failed for value \"customer\" (type string) at path \"_id\" for model \"Order\"","service":"order-service","timestamp":"2025-04-27 14:03:15"}
+{"level":"error","message":"Get order error: Cast to ObjectId failed for value \"customer\" (type string) at path \"_id\" for model \"Order\"","service":"order-service","timestamp":"2025-04-27 14:03:15"}
+{"level":"error","message":"Get order error: Cast to ObjectId failed for value \"customer\" (type string) at path \"_id\" for model \"Order\"","service":"order-service","timestamp":"2025-04-27 23:04:09"}
+{"level":"error","message":"Get order error: Cast to ObjectId failed for value \"customer\" (type string) at path \"_id\" for model \"Order\"","service":"order-service","timestamp":"2025-04-27 23:04:09"}
+{"level":"error","message":"Failed to notify restaurant service: Invalid URL","service":"order-service","timestamp":"2025-04-27 23:27:23"}
+{"level":"error","message":"Get order error: Cast to ObjectId failed for value \"customer\" (type string) at path \"_id\" for model \"Order\"","service":"order-service","timestamp":"2025-04-27 23:27:43"}
+{"level":"error","message":"Get order error: Cast to ObjectId failed for value \"customer\" (type string) at path \"_id\" for model \"Order\"","service":"order-service","timestamp":"2025-04-27 23:27:43"}
+{"level":"error","message":"Get order error: Cast to ObjectId failed for value \"customer\" (type string) at path \"_id\" for model \"Order\"","service":"order-service","timestamp":"2025-04-27 23:28:14"}
+{"level":"error","message":"Failed to notify restaurant service: Invalid URL","service":"order-service","timestamp":"2025-04-27 23:29:13"}
+{"level":"error","message":"Get order error: Cast to ObjectId failed for value \"customer\" (type string) at path \"_id\" for model \"Order\"","service":"order-service","timestamp":"2025-04-27 23:29:25"}
+{"level":"error","message":"Get order error: Cast to ObjectId failed for value \"nearby\" (type string) at path \"_id\" for model \"Order\"","service":"order-service","timestamp":"2025-04-28 00:34:59"}
+{"level":"error","message":"Failed to notify restaurant service: Invalid URL","service":"order-service","timestamp":"2025-04-28 00:47:23"}
+{"level":"error","message":"Get order error: Cast to ObjectId failed for value \"customer\" (type string) at path \"_id\" for model \"Order\"","service":"order-service","timestamp":"2025-04-28 00:48:23"}
+{"level":"error","message":"Failed to notify restaurant service: Invalid URL","service":"order-service","timestamp":"2025-04-28 01:26:16"}
+{"level":"error","message":"Get order error: Cast to ObjectId failed for value \"customer\" (type string) at path \"_id\" for model \"Order\"","service":"order-service","timestamp":"2025-04-28 06:29:45"}
+{"level":"error","message":"Get order error: Cast to ObjectId failed for value \"customer\" (type string) at path \"_id\" for model \"Order\"","service":"order-service","timestamp":"2025-04-28 06:29:45"}
+{"level":"error","message":"Failed to notify restaurant service: Invalid URL","service":"order-service","timestamp":"2025-04-28 06:30:01"}
+{"level":"error","message":"Failed to notify restaurant service: Invalid URL","service":"order-service","timestamp":"2025-04-28 06:30:10"}
+{"level":"error","message":"Get order error: Cast to ObjectId failed for value \"customer\" (type string) at path \"_id\" for model \"Order\"","service":"order-service","timestamp":"2025-04-28 06:30:33"}
+{"level":"error","message":"Get order error: Cast to ObjectId failed for value \"customer\" (type string) at path \"_id\" for model \"Order\"","service":"order-service","timestamp":"2025-04-28 06:30:33"}
+{"level":"error","message":"Get order error: Cast to ObjectId failed for value \"customer\" (type string) at path \"_id\" for model \"Order\"","service":"order-service","timestamp":"2025-04-28 06:45:08"}
+{"level":"error","message":"Get order error: Cast to ObjectId failed for value \"customer\" (type string) at path \"_id\" for model \"Order\"","service":"order-service","timestamp":"2025-04-28 06:45:08"}
+{"level":"error","message":"Failed to notify restaurant service: Invalid URL","service":"order-service","timestamp":"2025-04-28 06:46:13"}
+{"level":"error","message":"Create order error: Order validation failed: items.0.menuItemId: Cast to ObjectId failed for value \"680e13a6f4fd197e548bff63nameTypevalueEgg\" (type string) at path \"menuItemId\" because of \"BSONError\"","service":"order-service","timestamp":"2025-04-28 06:48:42"}
+{"level":"error","message":"Create order error: Order validation failed: items.0.menuItemId: Cast to ObjectId failed for value \"680e13a6f4fd197e548bff63nameTypevalueEgg\" (type string) at path \"menuItemId\" because of \"BSONError\"","service":"order-service","timestamp":"2025-04-28 06:49:20"}
+{"level":"error","message":"Failed to notify restaurant service: Invalid URL","service":"order-service","timestamp":"2025-04-28 06:49:43"}
+{"level":"error","message":"Failed to notify restaurant service: Invalid URL","service":"order-service","timestamp":"2025-04-28 19:31:33"}
+{"level":"error","message":"Get order error: Cast to ObjectId failed for value \"customer\" (type string) at path \"_id\" for model \"Order\"","service":"order-service","timestamp":"2025-04-28 19:37:16"}
+{"level":"error","message":"Get order error: Cast to ObjectId failed for value \"ready-for-pickup\" (type string) at path \"_id\" for model \"Order\"","service":"order-service","timestamp":"2025-04-28 20:01:10"}
+{"level":"error","message":"Get order error: Cast to ObjectId failed for value \"ready-for-pickup\" (type string) at path \"_id\" for model \"Order\"","service":"order-service","timestamp":"2025-04-28 20:01:50"}
+{"level":"error","message":"Get order error: Cast to ObjectId failed for value \"ready-for-pickup\" (type string) at path \"_id\" for model \"Order\"","service":"order-service","timestamp":"2025-04-28 20:01:56"}
+{"level":"error","message":"Get order error: Cast to ObjectId failed for value \"ready-for-pickup\" (type string) at path \"_id\" for model \"Order\"","service":"order-service","timestamp":"2025-04-28 21:11:48"}
+{"level":"error","message":"Get order error: Cast to ObjectId failed for value \"ready-for-pickup\" (type string) at path \"_id\" for model \"Order\"","service":"order-service","timestamp":"2025-04-28 21:27:41"}
+{"level":"error","message":"Get order error: Cast to ObjectId failed for value \"ready-for-pickup\" (type string) at path \"_id\" for model \"Order\"","service":"order-service","timestamp":"2025-04-28 21:28:00"}
+{"level":"error","message":"Get order error: Cast to ObjectId failed for value \"ready-for-pickup\" (type string) at path \"_id\" for model \"Order\"","service":"order-service","timestamp":"2025-04-28 21:49:01"}
+{"level":"error","message":"Get order error: Cast to ObjectId failed for value \"ready-for-pickup\" (type string) at path \"_id\" for model \"Order\"","service":"order-service","timestamp":"2025-04-28 22:25:22"}
+{"level":"error","message":"Get order error: Cast to ObjectId failed for value \"ready-for-pickup\" (type string) at path \"_id\" for model \"Order\"","service":"order-service","timestamp":"2025-04-28 22:46:34"}
+{"level":"error","message":"Get order error: Cast to ObjectId failed for value \"customer\" (type string) at path \"_id\" for model \"Order\"","service":"order-service","timestamp":"2025-04-28 22:49:04"}
+{"level":"error","message":"Get order error: Cast to ObjectId failed for value \"customer\" (type string) at path \"_id\" for model \"Order\"","service":"order-service","timestamp":"2025-04-28 23:01:12"}
+{"level":"error","message":"Failed to notify restaurant service: Invalid URL","service":"order-service","timestamp":"2025-04-28 23:06:54"}
