@@ -24,3 +24,4 @@
 {"level":"error","message":"Login error: Socket 'secureConnect' timed out after 30006ms (connectTimeoutMS: 30000)","service":"auth-service","timestamp":"2025-05-11 09:06:32"}
 {"level":"error","message":"Get user profile error: Socket 'secureConnect' timed out after 30009ms (connectTimeoutMS: 30000)","service":"auth-service","timestamp":"2025-05-11 10:06:34"}
 {"level":"error","message":"Error registering with service: Request failed with status code 400","service":"auth-service","timestamp":"2025-05-16 04:29:04"}
+{"level":"error","message":"Error registering with service: Request failed with status code 403","service":"auth-service","timestamp":"2025-05-16 16:19:55"}

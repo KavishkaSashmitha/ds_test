@@ -99,43 +99,6 @@ export default function LoginPage() {
             </CardHeader>
             <form onSubmit={handleSubmit}>
               <CardContent className="space-y-4 pt-2">
-                <div className="space-y-3">
-                  <Label htmlFor="role" className="font-medium">
-                    Select your role
-                  </Label>
-                  <RadioGroup
-                    id="role"
-                    value={userRole}
-                    onValueChange={(value) => setUserRole(value as UserRole)}
-                    className="grid grid-cols-2 gap-2"
-                  >
-                    <div className="flex items-center space-x-2 rounded-md border border-orange-100 p-2 transition-colors hover:bg-orange-50">
-                      <RadioGroupItem value="customer" id="customer" />
-                      <Label htmlFor="customer" className="cursor-pointer">
-                        Customer
-                      </Label>
-                    </div>
-                    <div className="flex items-center space-x-2 rounded-md border border-orange-100 p-2 transition-colors hover:bg-orange-50">
-                      <RadioGroupItem value="restaurant" id="restaurant" />
-                      <Label htmlFor="restaurant" className="cursor-pointer">
-                        Restaurant Admin
-                      </Label>
-                    </div>
-                    <div className="flex items-center space-x-2 rounded-md border border-orange-100 p-2 transition-colors hover:bg-orange-50">
-                      <RadioGroupItem value="delivery" id="delivery" />
-                      <Label htmlFor="delivery" className="cursor-pointer">
-                        Delivery Personnel
-                      </Label>
-                    </div>
-                    <div className="flex items-center space-x-2 rounded-md border border-orange-100 p-2 transition-colors hover:bg-orange-50">
-                      <RadioGroupItem value="admin" id="admin" />
-                      <Label htmlFor="admin" className="cursor-pointer">
-                        System Admin
-                      </Label>
-                    </div>
-                  </RadioGroup>
-                </div>
-
                 <div className="space-y-2">
                   <Label htmlFor="email" className="font-medium">
                     Email

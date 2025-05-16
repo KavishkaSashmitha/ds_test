@@ -8,6 +8,7 @@ const socketIo = require("socket.io")
 const logger = require("./utils/logger")
 const deliveryRoutes = require("./routes/deliveryRoutes")
 const locationRoutes = require("./routes/locationRoutes")
+const publicLocationRoutes = require("./routes/publicLocationRoutes")
 const earningsRoutes = require("./routes/earningsRoutes")
 const socketHandler = require("./utils/socketHandler")
 
@@ -52,6 +53,9 @@ socketHandler(io)
 app.get("/health", (req, res) => {
   res.status(200).json({ status: "OK", message: "Delivery Service is running" })
 })
+
+// Public routes (no authentication required)
+app.use("/public/locations", publicLocationRoutes)
 
 // Routes
 app.use("/deliveries", deliveryRoutes)

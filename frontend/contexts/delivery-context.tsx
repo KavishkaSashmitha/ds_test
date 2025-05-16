@@ -97,9 +97,9 @@ export function DeliveryProvider({ children }: { children: React.ReactNode }) {
   const [orderHistory, setOrderHistory] = useState<DeliveryOrder[]>([]);
   const [isLoading, setIsLoading] = useState<boolean>(false);
   const [earnings, setEarnings] = useState({
-    today: 1050,
-    week: 7350,
-    month: 29400,
+    today: 0,
+    week: 0,
+    month: 0,
   });
   const locationWatchIdRef = useRef<number | null>(null);
 
@@ -357,29 +357,7 @@ export function DeliveryProvider({ children }: { children: React.ReactNode }) {
         description: "Please try again later",
         variant: "destructive",
       });
-
-      // For demonstration purposes only, provide some mock data
-      // so the app doesn't look empty. Remove this in production.
-      setAvailableOrders([
-        {
-          id: "mock-1",
-          restaurantId: "rest-1",
-          restaurantName: "Burger Palace",
-          restaurantAddress: "123 Main St",
-          restaurantLocation: { lat: 6.9271, lng: 79.8612 },
-          customerName: "John D.",
-          customerAddress: "456 Side St, Colombo",
-          customerLocation: { lat: 6.9344, lng: 79.8528 },
-          customerPhone: "N/A",
-          items: [{ name: "Burger", quantity: 2 }],
-          total: 1200,
-          status: "ready_for_pickup",
-          distance: 2.3,
-          estimatedTime: "15-20 min",
-          earnings: 200,
-          createdAt: new Date().toISOString(),
-        },
-      ]);
+      setAvailableOrders([]);
     } finally {
       setIsLoading(false);
     }

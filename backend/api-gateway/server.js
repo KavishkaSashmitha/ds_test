@@ -3,12 +3,15 @@ const cors = require('cors');
 const jwt = require('jsonwebtoken');
 const { createProxyMiddleware } = require('http-proxy-middleware');
 const dotenv = require('dotenv');
+const http = require('http');
+const { Server } = require('socket.io');
 const logger = require('./utils/logger');
 
 // Load environment variables
 dotenv.config();
 
 const app = express();
+const server = http.createServer(app);
 
 const JWT_SECRET = process.env.JWT_SECRET;
 const ENV = process.env.NODE_ENV || 'development';
@@ -286,15 +289,63 @@ app.use('/delivery', authenticate, createProxyMiddleware({
   }
 }));
 
+// Public delivery location routes - no authentication required
+app.use('/delivery/public', createProxyMiddleware({
+  ...createProxyConfig(serviceUrls.delivery),
+  pathRewrite: {
+    '^/delivery/public': '/public'  // This maps to the public routes in delivery service
+  }
+}));
+
 const PORT = process.env.PORT || 8080;
-app.listen(PORT, () => {
+
+// Initialize Socket.IO
+const io = new Server(server, {
+  cors: {
+    origin: function(origin, callback) {
+      // Allow requests with no origin (like mobile apps or curl)
+      if (!origin) return callback(null, true);
+      
+      // During development, allow any localhost origin regardless of port
+      if (ENV === 'development' && 
+          (origin.startsWith('http://localhost:') || 
+           origin.startsWith('http://127.0.0.1:'))) {
+        return callback(null, true);
+      }
+      
+      const allowedOrigins = [
+        'http://localhost:3000',
+        'http://localhost:3002',
+        'http://localhost:3001',
+        'http://localhost:3004',
+        'http://localhost:8000',
+        'http://localhost:8080'
+        // Add your production domains here
+      ];
+      
+      if (allowedOrigins.indexOf(origin) !== -1) {
+        callback(null, true);
+      } else {
+        callback(new Error('CORS policy: Origin not allowed'));
+      }
+    },
+    methods: ['GET', 'POST'],
+    credentials: true
+  }
+});
+
+// Setup socket handlers
+require('./socketHandler')(io);
+
+server.listen(PORT, () => {
   logger.info(`API Gateway running on port ${PORT} in ${ENV} mode`);
   logger.info(`Using ${USE_DOCKER ? 'Docker' : 'local'} service URLs`);
   logger.info('Available routes:');
   logger.info(`  /auth -> ${serviceUrls.auth}`);
   logger.info(`  /restaurants -> ${serviceUrls.restaurant}`);
-  logger.info(`  /orders -> ${serviceUrls.order}`); // Added order service to logs
-  logger.info(`  /payments -> ${serviceUrls.order}`); // Added payment service to logs
+  logger.info(`  /orders -> ${serviceUrls.order}`);
+  logger.info(`  /payments -> ${serviceUrls.order}`);
   logger.info(`  /delivery -> ${serviceUrls.delivery}`);
   logger.info('  /health - API Gateway health check');
+  logger.info('  WebSocket support enabled for real-time tracking');
 });

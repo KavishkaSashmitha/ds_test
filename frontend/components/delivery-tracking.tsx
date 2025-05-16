@@ -5,9 +5,14 @@ import { useToast } from "@/hooks/use-toast";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { Phone, Navigation, Clock, MapPin, Info } from "lucide-react";
+import { Phone, Clock, MapPin, Info, ExternalLink } from "lucide-react";
 import DeliveryMap from "@/components/delivery-map";
-import { io, Socket } from "socket.io-client";
+import {
+  subscribeToLocationUpdates,
+  fetchDriverLocation,
+} from "@/lib/socketService";
+import { ShareTrackingLink } from "@/components/share-tracking-link";
+import Link from "next/link";
 
 // Status labels for UI display
 const statusLabels = {
@@ -68,7 +73,7 @@ export default function DeliveryTracking({
   deliveryId,
   orderId,
   initialStatus = "pending",
-}: DeliveryTrackingProps) {
+}: Readonly<DeliveryTrackingProps>) {
   const { toast } = useToast();
   const [delivery, setDelivery] = useState<DeliveryInfo | null>(null);
   const [driverLocation, setDriverLocation] = useState<{
@@ -78,7 +83,7 @@ export default function DeliveryTracking({
   const [estimatedArrival, setEstimatedArrival] = useState<string | null>(null);
   const [status, setStatus] = useState<string>(initialStatus);
   const [loading, setLoading] = useState<boolean>(true);
-  const socketRef = useRef<Socket | null>(null);
+  const unsubscribeRef = useRef<Function | null>(null);
 
   // Fetch delivery information
   useEffect(() => {
@@ -94,9 +99,9 @@ export default function DeliveryTracking({
         setDelivery(data.delivery);
         setStatus(data.delivery.status);
 
-        // If we have a delivery person ID, fetch their current location
-        if (data.delivery.deliveryPersonnelId) {
-          fetchDriverLocation(data.delivery.deliveryPersonnelId);
+        // If we have a delivery, setup location tracking
+        if (data.delivery) {
+          setupLocationTracking(deliveryId, orderId, data.delivery.status);
         }
       } catch (error) {
         console.error("Error fetching delivery:", error);
@@ -113,205 +118,111 @@ export default function DeliveryTracking({
     fetchDeliveryInfo();
   }, [deliveryId, toast]);
 
-  // Fetch driver's location
-  const fetchDriverLocation = async (driverId: string) => {
+  // Setup real-time location tracking
+  const setupLocationTracking = (
+    deliveryId: string,
+    orderId: string,
+    currentStatus: string
+  ) => {
+    // Clean up previous subscription if any
+    if (unsubscribeRef.current) {
+      unsubscribeRef.current();
+      unsubscribeRef.current = null;
+    }
+
+    // Don't track if delivery is complete or cancelled
+    if (currentStatus === "delivered" || currentStatus === "cancelled") {
+      return;
+    }
+
+    // First get the current location
+    getInitialDriverLocation(orderId);
+
+    // Then subscribe to real-time updates
+    const unsubscribe = subscribeToLocationUpdates(deliveryId, (data: any) => {
+      handleLocationUpdate(data);
+    });
+
+    unsubscribeRef.current = unsubscribe;
+  };
+
+  // Fetch initial driver location using REST API
+  const getInitialDriverLocation = async (orderId: string) => {
     try {
-      const res = await fetch(`/api/location/personnel/${driverId}`);
+      const locationData = await fetchDriverLocation(orderId);
 
-      if (!res.ok) return;
-
-      const data = await res.json();
-      if (data.location) {
+      if (locationData?.location) {
         setDriverLocation({
-          lat: data.location.latitude,
-          lng: data.location.longitude,
+          lat: locationData.location.latitude,
+          lng: locationData.location.longitude,
         });
 
-        // Calculate ETA based on location
-        calculateETA(data.location.latitude, data.location.longitude);
+        // Update status if needed
+        if (locationData.status && status !== locationData.status) {
+          setStatus(locationData.status);
+        }
+
+        // Update estimated arrival
+        if (locationData.estimatedArrival) {
+          setEstimatedArrival(
+            `${
+              locationData.estimatedArrival.estimatedMinutes
+            } minutes (${new Date(
+              locationData.estimatedArrival.estimatedTime
+            ).toLocaleTimeString()})`
+          );
+        }
       }
     } catch (error) {
-      console.error("Error fetching driver location:", error);
+      console.error("Error fetching initial driver location:", error);
     }
   };
 
-  // Calculate estimated time of arrival
-  const calculateETA = (driverLat: number, driverLng: number) => {
-    if (!delivery) return;
+  // Handle location updates from Socket.io
+  const handleLocationUpdate = (data: any) => {
+    // Update driver location on map
+    if (data.location) {
+      setDriverLocation({
+        lat: data.location.latitude,
+        lng: data.location.longitude,
+      });
+    }
 
-    // Determine destination based on status
-    const destCoords =
-      status === "picked_up" || status === "in_transit"
-        ? delivery.customerLocation.coordinates
-        : delivery.restaurantLocation.coordinates;
+    // Update delivery status if changed
+    if (data.status && status !== data.status) {
+      setStatus(data.status);
+    }
 
-    // Calculate distance using Haversine formula
-    const R = 6371; // Earth radius in km
-    const dLat = ((destCoords[1] - driverLat) * Math.PI) / 180;
-    const dLng = ((destCoords[0] - driverLng) * Math.PI) / 180;
-    const a =
-      Math.sin(dLat / 2) * Math.sin(dLat / 2) +
-      Math.cos((driverLat * Math.PI) / 180) *
-        Math.cos((destCoords[1] * Math.PI) / 180) *
-        Math.sin(dLng / 2) *
-        Math.sin(dLng / 2);
-    const c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
-    const distance = R * c; // Distance in km
-
-    // Assume average speed of 20 km/h in city traffic
-    const timeInMinutes = Math.ceil(distance * 3); // Multiply by 3 for minutes (20 km/h = 1/3 km per minute)
-
-    // Calculate estimated arrival time
-    const arrivalTime = new Date();
-    arrivalTime.setMinutes(arrivalTime.getMinutes() + timeInMinutes);
-
-    // Format arrival time
-    const formattedTime = arrivalTime.toLocaleTimeString([], {
-      hour: "2-digit",
-      minute: "2-digit",
-    });
-
-    setEstimatedArrival(formattedTime);
+    // Update estimated arrival
+    if (data.estimatedArrival) {
+      setEstimatedArrival(
+        `${data.estimatedArrival.estimatedMinutes} minutes (${new Date(
+          data.estimatedArrival.estimatedTime
+        ).toLocaleTimeString()})`
+      );
+    }
   };
 
-  // Setup real-time updates with Socket.IO
+  // Clean up socket connection on unmount
   useEffect(() => {
-    if (!delivery) return;
-
-    // Connect to WebSocket server with token-based authentication
-    const socketUrl =
-      process.env.NEXT_PUBLIC_SOCKET_URL || "http://localhost:4000";
-    console.log("Connecting to socket server at:", socketUrl);
-
-    const socket = io(socketUrl, {
-      transports: ["websocket"], // Use websocket transport for better performance
-      reconnectionAttempts: 5, // Try to reconnect 5 times
-      reconnectionDelay: 1000, // Start with 1s delay between retries
-    });
-
-    socketRef.current = socket;
-
-    // Handle connection events
-    socket.on("connect", () => {
-      console.log("Socket.IO connected successfully");
-
-      // Join tracking room for this delivery
-      socket.emit("track_delivery", deliveryId);
-      console.log(`Tracking delivery: ${deliveryId}`);
-    });
-
-    // Listen for delivery status updates
-    socket.on("delivery_status_update", (data) => {
-      console.log("Received delivery status update:", data);
-      if (data.deliveryId === deliveryId || data.orderId === orderId) {
-        setStatus(data.status);
-        toast({
-          title: "Delivery Status Updated",
-          description: `Your delivery is now ${
-            statusLabels[data.status as keyof typeof statusLabels] ||
-            data.status
-          }`,
-        });
-      }
-    });
-
-    // Listen for location updates from the delivery personnel
-    socket.on("location_update", (data) => {
-      console.log("Received location update:", data);
-      if (data.deliveryId === deliveryId) {
-        setDriverLocation({
-          lat: data.location.latitude,
-          lng: data.location.longitude,
-        });
-
-        // Update estimated arrival if provided by the server
-        if (data.estimatedArrival) {
-          const arrivalTime = new Date(
-            data.estimatedArrival.estimatedArrivalTime
-          );
-          setEstimatedArrival(
-            arrivalTime.toLocaleTimeString([], {
-              hour: "2-digit",
-              minute: "2-digit",
-            })
-          );
-        } else {
-          // Otherwise calculate locally
-          calculateETA(data.location.latitude, data.location.longitude);
-        }
-      }
-    });
-
-    // Listen for tracking updates - this is an alternative event some backends might emit
-    socket.on("delivery_tracking_update", (data) => {
-      console.log("Received delivery tracking update:", data);
-      if (data.deliveryId === deliveryId || data.orderId === orderId) {
-        setDriverLocation({
-          lat: data.location.latitude,
-          lng: data.location.longitude,
-        });
-
-        // Update status if provided
-        if (data.status) {
-          setStatus(data.status);
-        }
-
-        // Update estimated arrival if provided
-        if (data.estimatedArrival) {
-          const arrivalTime = new Date(
-            data.estimatedArrival.estimatedArrivalTime
-          );
-          setEstimatedArrival(
-            arrivalTime.toLocaleTimeString([], {
-              hour: "2-digit",
-              minute: "2-digit",
-            })
-          );
-        }
-      }
-    });
-
-    // Handle connection errors
-    socket.on("connect_error", (error) => {
-      console.error("Socket connection error:", error);
-      toast({
-        title: "Connection Error",
-        description: "Having trouble connecting to live tracking service",
-        variant: "destructive",
-      });
-    });
-
-    // Handle socket errors
-    socket.on("error", (error) => {
-      console.error("Socket error:", error);
-    });
-
-    // Clean up when component unmounts
     return () => {
-      if (socket.connected) {
-        console.log("Stopping delivery tracking");
-        socket.emit("stop_tracking", deliveryId);
-        socket.disconnect();
-        console.log("Socket disconnected");
+      if (unsubscribeRef.current) {
+        unsubscribeRef.current();
+        unsubscribeRef.current = null;
       }
     };
-  }, [delivery, deliveryId, orderId, toast]);
+  }, []);
 
   // Create a timer to refresh driver location every 30 seconds as a fallback
   useEffect(() => {
-    if (
-      !delivery?.deliveryPersonnelId ||
-      status === "delivered" ||
-      status === "cancelled"
-    )
-      return;
+    if (!delivery || status === "delivered" || status === "cancelled") return;
 
     const intervalId = setInterval(() => {
-      fetchDriverLocation(delivery.deliveryPersonnelId);
+      getInitialDriverLocation(orderId);
     }, 30000);
 
     return () => clearInterval(intervalId);
-  }, [delivery, status]);
+  }, [delivery, status, orderId]);
 
   if (loading) {
     return (
@@ -335,18 +246,6 @@ export default function DeliveryTracking({
       </Card>
     );
   }
-
-  // Get destination based on status
-  const destination =
-    status === "pending" || status === "assigned"
-      ? {
-          lat: delivery.restaurantLocation.coordinates[1],
-          lng: delivery.restaurantLocation.coordinates[0],
-        }
-      : {
-          lat: delivery.customerLocation.coordinates[1],
-          lng: delivery.customerLocation.coordinates[0],
-        };
 
   // Get driver information
   const driverInfo = delivery.deliveryPersonnel;
@@ -512,8 +411,22 @@ export default function DeliveryTracking({
         </CardContent>
       </Card>
 
+      {/* Tracking Actions */}
+      {["assigned", "picked_up", "in_transit"].includes(status) && (
+        <div className="flex gap-2 justify-center">
+          <ShareTrackingLink deliveryId={deliveryId} orderId={orderId} />
+          
+          <Link href={`/track?deliveryId=${deliveryId}&orderId=${orderId}`} target="_blank" passHref>
+            <Button variant="outline" size="sm" className="gap-2">
+              <ExternalLink className="h-4 w-4" />
+              Full Screen Tracking
+            </Button>
+          </Link>
+        </div>
+      )}
+
       {/* Help Button */}
-      <div className="flex justify-center">
+      <div className="flex justify-center mt-4">
         <Button variant="outline" className="flex gap-2">
           <Info className="h-4 w-4" />I need help with this order
         </Button>

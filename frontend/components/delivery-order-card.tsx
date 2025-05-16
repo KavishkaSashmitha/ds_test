@@ -10,7 +10,7 @@ import { Badge } from "@/components/ui/badge";
 interface DeliveryOrderCardProps {
   order: DeliveryOrder;
   showActions?: boolean;
-  onSelect?: () => void;
+  onSelect?: (orderId: string) => void;
 }
 
 export function DeliveryOrderCard({
@@ -50,13 +50,14 @@ export function DeliveryOrderCard({
     return status.replace(/_/g, " ").replace(/\b\w/g, (l) => l.toUpperCase());
   };
 
-  const handleAcceptOrder = () => {
+  const handleAcceptOrder = (e: React.MouseEvent) => {
+    e.stopPropagation();
     acceptOrder(order.id);
   };
 
   return (
-    <Card onClick={onSelect}>
-      <CardContent className="p-4">
+    <Card onClick={() => onSelect && onSelect(order.id)}>
+      <CardContent className="p-4 cursor-pointer">
         <div className="flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
           <div>
             <div className="mb-1 flex items-center gap-2">
