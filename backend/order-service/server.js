@@ -2,6 +2,7 @@ const express = require("express");
 const mongoose = require("mongoose");
 const cors = require("cors");
 const dotenv = require("dotenv");
+const bodyParser = require("body-parser");
 const orderRoutes = require("./routes/orderRoutes");
 const paymentRoutes = require("./routes/paymentRoutes");
 const logger = require("./utils/logger");
@@ -27,6 +28,11 @@ mongoose
   });
 
 // Middleware
+
+// Increase payload size limit
+app.use(bodyParser.json({ limit: "100mb" })); // Increase the limit to handle large payloads
+app.use(bodyParser.urlencoded({ limit: "100mb", extended: true }));
+
 app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));

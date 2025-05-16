@@ -206,9 +206,10 @@ app.use(['/restaurants', '/menus'], authenticate, createProxyMiddleware({
 
 // Order and Payment service routes (auth required)
 app.use('/orders', authenticate, createProxyMiddleware({
-  ...createProxyConfig(serviceUrls.order),
+  target: serviceUrls.order, // Ensure this points to the correct service URL
+  changeOrigin: true,
   pathRewrite: {
-    '^/orders': '/'  // This removes the /orders prefix when forwarding
+    '^/orders': '/', // This removes the /orders prefix when forwarding
   },
   onProxyReq: (proxyReq, req, res) => {
     logger.info(`Proxying request to Order Service: ${req.method} ${req.originalUrl}`);

@@ -13,6 +13,12 @@ import { MenuItemCard } from "@/components/menu-item-card";
 import { restaurantApi } from "@/lib/api";
 import { Restaurant, MenuItem, BusinessHours } from "@/lib/api";
 
+// Extend the Restaurant type to include the missing properties
+interface ExtendedRestaurant extends Restaurant {
+  isOpen?: boolean;
+  acceptingOrders?: boolean;
+}
+
 // Fallback mock menu categories (in case the API doesn't provide categories)
 const menuCategories = [
   { id: "popular", name: "Popular Items" },
@@ -29,7 +35,7 @@ export default function RestaurantPage() {
 
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState("");
-  const [restaurant, setRestaurant] = useState<Restaurant | null>(null);
+  const [restaurant, setRestaurant] = useState<ExtendedRestaurant | null>(null);
   const [businessHours, setBusinessHours] = useState<BusinessHours | null>(
     null
   );
@@ -51,7 +57,8 @@ export default function RestaurantPage() {
         const restaurantResponse = await restaurantApi.getRestaurantById(
           restaurantId
         );
-        setRestaurant(restaurantResponse.data.restaurant);
+        const restaurantData = restaurantResponse.data.restaurant as ExtendedRestaurant; // Use the extended type
+        setRestaurant(restaurantData);
 
         if (restaurantResponse.data.businessHours) {
           setBusinessHours(restaurantResponse.data.businessHours);
@@ -316,6 +323,22 @@ export default function RestaurantPage() {
             <div>
               <span className="font-medium">Hours:</span>{" "}
               {getFormattedBusinessHours()}
+            </div>
+            <div>
+              <span className="font-medium">Status:</span>{" "}
+              {restaurant.isOpen ? (
+                <span className="text-green-600">Open</span>
+              ) : (
+                <span className="text-red-600">Closed</span>
+              )}
+            </div>
+            <div>
+              <span className="font-medium">Accepting Orders:</span>{" "}
+              {restaurant.acceptingOrders ? (
+                <span className="text-green-600">Yes</span>
+              ) : (
+                <span className="text-red-600">No</span>
+              )}
             </div>
           </div>
         </div>

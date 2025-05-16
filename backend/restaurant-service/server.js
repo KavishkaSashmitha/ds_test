@@ -7,6 +7,7 @@ const logger = require("./utils/logger")
 const restaurantRoutes = require("./routes/restaurantRoutes")
 const menuRoutes = require("./routes/menuRoutes")
 const availabilityRoutes = require("./routes/availabilityRoutes")
+const path = require("path")
 
 // Load environment variables
 dotenv.config()
@@ -18,6 +19,9 @@ const PORT = process.env.PORT || 3002
 app.use(cors())
 app.use(express.json())
 app.use(morgan("combined", { stream: { write: (message) => logger.info(message.trim()) } }))
+
+// Serve static files from the uploads directory
+app.use("/uploads", express.static(path.join(__dirname, "uploads")))
 
 // Connect to MongoDB
 mongoose

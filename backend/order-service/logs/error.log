@@ -44,3 +44,41 @@
 {"level":"error","message":"Get order error: Cast to ObjectId failed for value \"customer\" (type string) at path \"_id\" for model \"Order\"","service":"order-service","timestamp":"2025-04-28 22:49:04"}
 {"level":"error","message":"Get order error: Cast to ObjectId failed for value \"customer\" (type string) at path \"_id\" for model \"Order\"","service":"order-service","timestamp":"2025-04-28 23:01:12"}
 {"level":"error","message":"Failed to notify restaurant service: Invalid URL","service":"order-service","timestamp":"2025-04-28 23:06:54"}
+{"level":"error","message":"MongoDB connection error: querySrv ETIMEOUT _mongodb._tcp.fooddelivery.ouayq.mongodb.net","service":"order-service","timestamp":"2025-05-11 11:58:42"}
+{"level":"error","message":"Failed to notify restaurant service: Invalid URL","service":"order-service","timestamp":"2025-05-11 09:47:32"}
+{"level":"error","message":"Failed to notify restaurant service: Invalid URL","service":"order-service","timestamp":"2025-05-11 09:48:12"}
+{"level":"error","message":"Update order status error: Cast to ObjectId failed for value \"Special Butter Chicken\" (type string) at path \"_id\" for model \"Order\"","service":"order-service","timestamp":"2025-05-11 09:49:04"}
+{"level":"error","message":"Update order status error: Cast to ObjectId failed for value \"Special Butter Chicken\" (type string) at path \"_id\" for model \"Order\"","service":"order-service","timestamp":"2025-05-11 09:52:31"}
+{"level":"error","message":"Update order status error: Cast to ObjectId failed for value \"Special Butter Chicken\" (type string) at path \"_id\" for model \"Order\"","service":"order-service","timestamp":"2025-05-11 10:18:34"}
+{"level":"error","message":"Update order status error: Cast to ObjectId failed for value \"Special Butter Chicken\" (type string) at path \"_id\" for model \"Order\"","service":"order-service","timestamp":"2025-05-11 10:32:44"}
+{"level":"error","message":"Update order status error: Cast to ObjectId failed for value \"Special Butter Chicken\" (type string) at path \"_id\" for model \"Order\"","service":"order-service","timestamp":"2025-05-11 10:37:34"}
+{"level":"error","message":"Get order error: Cast to ObjectId failed for value \"customer\" (type string) at path \"_id\" for model \"Order\"","service":"order-service","timestamp":"2025-05-11 11:13:07"}
+{"level":"error","message":"Get order error: Cast to ObjectId failed for value \"customer\" (type string) at path \"_id\" for model \"Order\"","service":"order-service","timestamp":"2025-05-11 11:13:07"}
+{"level":"error","message":"Update order status error: Cast to ObjectId failed for value \"Special Butter Chicken\" (type string) at path \"_id\" for model \"Order\"","service":"order-service","timestamp":"2025-05-11 11:14:33"}
+{"level":"error","message":"Update order status error: Cast to ObjectId failed for value \"Special Butter Chicken\" (type string) at path \"_id\" for model \"Order\"","service":"order-service","timestamp":"2025-05-11 12:02:01"}
+{"level":"error","message":"Update order status error: Cast to ObjectId failed for value \"Special Butter Chicken\" (type string) at path \"_id\" for model \"Order\"","service":"order-service","timestamp":"2025-05-11 12:06:57"}
+{"level":"error","message":"Update order status error: Cast to ObjectId failed for value \"Special Butter Chicken\" (type string) at path \"_id\" for model \"Order\"","service":"order-service","timestamp":"2025-05-12 08:14:45"}
+{"level":"error","message":"Update order status error: Cast to ObjectId failed for value \"Special Butter Chicken\" (type string) at path \"_id\" for model \"Order\"","service":"order-service","timestamp":"2025-05-12 08:17:01"}
+{"level":"error","message":"Update order status error: Cast to ObjectId failed for value \"Special Butter Chicken\" (type string) at path \"_id\" for model \"Order\"","service":"order-service","timestamp":"2025-05-12 08:18:29"}
+{"level":"error","message":"Update order status error: Cast to ObjectId failed for value \"Special Butter Chicken\" (type string) at path \"_id\" for model \"Order\"","service":"order-service","timestamp":"2025-05-12 08:23:57"}
+{"level":"error","message":"Update order status error: Cast to ObjectId failed for value \"Special Butter Chicken\" (type string) at path \"_id\" for model \"Order\"","service":"order-service","timestamp":"2025-05-12 08:26:18"}
+{"level":"error","message":"Failed to notify restaurant service: Invalid URL","service":"order-service","timestamp":"2025-05-12 14:08:07"}
+{"level":"error","message":"Update order status error: Cast to ObjectId failed for value \"Ramen\" (type string) at path \"_id\" for model \"Order\"","service":"order-service","timestamp":"2025-05-12 14:21:51"}
+{"level":"error","message":"Update order status error: Cast to ObjectId failed for value \"Ramen\" (type string) at path \"_id\" for model \"Order\"","service":"order-service","timestamp":"2025-05-12 14:30:34"}
+{"level":"error","message":"Failed to notify restaurant service: Invalid URL","service":"order-service","timestamp":"2025-05-12 14:34:19"}
+{"level":"error","message":"Update order status error: Cast to ObjectId failed for value \"Pizza\" (type string) at path \"_id\" for model \"Order\"","service":"order-service","timestamp":"2025-05-12 17:42:59"}
+{"level":"error","message":"Update order status error: Cast to ObjectId failed for value \"Pizza\" (type string) at path \"_id\" for model \"Order\"","service":"order-service","timestamp":"2025-05-12 17:56:06"}
+{"level":"error","message":"Update order status error: Cast to ObjectId failed for value \"Pizza\" (type string) at path \"_id\" for model \"Order\"","service":"order-service","timestamp":"2025-05-12 18:02:47"}
+{"level":"error","message":"Update order status error: Cast to ObjectId failed for value \"Pizza\" (type string) at path \"_id\" for model \"Order\"","service":"order-service","timestamp":"2025-05-12 18:05:19"}
+{"level":"error","message":"Update order status error: Cast to ObjectId failed for value \"Pizza\" (type string) at path \"_id\" for model \"Order\"","service":"order-service","timestamp":"2025-05-12 18:09:20"}
+{"level":"error","message":"Update order status error: Cast to ObjectId failed for value \"Pizza\" (type string) at path \"_id\" for model \"Order\"","service":"order-service","timestamp":"2025-05-12 18:29:40"}
+{"level":"error","message":"Update order status error: Cast to ObjectId failed for value \"Pizza\" (type string) at path \"_id\" for model \"Order\"","service":"order-service","timestamp":"2025-05-12 18:51:20"}
+{"level":"error","message":"Failed to notify restaurant service: Invalid URL","service":"order-service","timestamp":"2025-05-15 05:20:40"}
+{"level":"error","message":"Update order status error: Cast to ObjectId failed for value \"Pizza\" (type string) at path \"_id\" for model \"Order\"","service":"order-service","timestamp":"2025-05-15 05:25:20"}
+{"level":"error","message":"Update order status error: Cast to ObjectId failed for value \"Pizza\" (type string) at path \"_id\" for model \"Order\"","service":"order-service","timestamp":"2025-05-15 05:29:28"}
+{"level":"error","message":"Failed to notify restaurant service: Invalid URL","service":"order-service","timestamp":"2025-05-15 07:15:44"}
+{"level":"error","message":"Update order status error: Cast to ObjectId failed for value \"Ramen\" (type string) at path \"_id\" for model \"Order\"","service":"order-service","timestamp":"2025-05-15 07:50:59"}
+{"level":"error","message":"Update order status error: Cast to ObjectId failed for value \"Ramen\" (type string) at path \"_id\" for model \"Order\"","service":"order-service","timestamp":"2025-05-15 07:54:11"}
+{"level":"error","message":"Update order status error: Cast to ObjectId failed for value \"Ramen\" (type string) at path \"_id\" for model \"Order\"","service":"order-service","timestamp":"2025-05-15 07:58:33"}
+{"level":"error","message":"Update order status error: Cast to ObjectId failed for value \"Ramen\" (type string) at path \"_id\" for model \"Order\"","service":"order-service","timestamp":"2025-05-16 04:16:51"}
+{"level":"error","message":"Failed to notify restaurant service: Invalid URL","service":"order-service","timestamp":"2025-05-16 05:09:52"}

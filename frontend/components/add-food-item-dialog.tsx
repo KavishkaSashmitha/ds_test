@@ -4,6 +4,7 @@ import type React from "react"
 import { useState, useRef } from "react"
 import Image from "next/image"
 import { Upload, X } from "lucide-react"
+import imageCompression from "browser-image-compression"
 
 import { Button } from "@/components/ui/button"
 import {
@@ -62,7 +63,7 @@ export function AddFoodItemDialog({ isOpen, onClose, onAdd, categories }: AddFoo
     setFormData((prev) => ({ ...prev, category: value }))
   }
 
-  const handleImageChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+  const handleImageChange = async (e: React.ChangeEvent<HTMLInputElement>) => {
     const file = e.target.files?.[0]
     if (!file) return
 
@@ -72,20 +73,26 @@ export function AddFoodItemDialog({ isOpen, onClose, onAdd, categories }: AddFoo
       return
     }
 
-    // Check file size (limit to 5MB)
-    if (file.size > 5 * 1024 * 1024) {
-      alert("Image size should be less than 5MB")
-      return
-    }
+    // Compress the image
+    try {
+      const compressedFile = await imageCompression(file, {
+        maxSizeMB: 1, // Limit the size to 1MB
+        maxWidthOrHeight: 1024, // Resize to a maximum dimension of 1024px
+        useWebWorker: true,
+      })
 
-    setImageFile(file)
+      setImageFile(compressedFile)
 
-    // Create preview
-    const reader = new FileReader()
-    reader.onloadend = () => {
-      setImagePreview(reader.result as string)
+      // Create preview
+      const reader = new FileReader()
+      reader.onloadend = () => {
+        setImagePreview(reader.result as string)
+      }
+      reader.readAsDataURL(compressedFile)
+    } catch (error) {
+      console.error("Error compressing image:", error)
+      alert("Failed to process the image. Please try again.")
     }
-    reader.readAsDataURL(file)
   }
 
   const removeImage = () => {
@@ -101,41 +108,31 @@ export function AddFoodItemDialog({ isOpen, onClose, onAdd, categories }: AddFoo
     setIsUploading(true)
 
     try {
-      let imageUrl = "/placeholder.svg?height=100&width=100" // Default image
+      let base64Image = null
 
-      // If there's an image file, upload it
+      // If there's an image file, convert it to a base64 string
       if (imageFile) {
-        // In a real application, you would upload the image to your server or a service like Cloudinary/S3
-        // For now, we'll simulate an upload and use the preview as the URL
-        // This is just for demonstration - in production, implement proper image upload
-
-        // Simulate upload delay
-        await new Promise((resolve) => setTimeout(resolve, 1000))
-
-        // In a real app, you would get the URL from your upload response
-        imageUrl = imagePreview || imageUrl
+        const reader = new FileReader()
+        base64Image = await new Promise<string>((resolve, reject) => {
+          reader.onloadend = () => {
+            console.log("Base64 Image:", reader.result) // Debugging log
+            resolve(reader.result as string)
+          }
+          reader.onerror = reject
+          reader.readAsDataURL(imageFile)
+        })
       }
 
-      // Call the onAdd function with form data and image URL
-      onAdd({
+      const formDataWithImage = {
         ...formData,
         price: Number.parseFloat(formData.price),
-        image: imageUrl,
-      })
+        image: base64Image || null, // Send the base64 image or null if no image is provided
+      }
 
-      // Reset form
-      setFormData({
-        name: "",
-        description: "",
-        price: "",
-        category: "",
-        available: true,
-        isVegetarian: false,
-        isVegan: false,
-        isGlutenFree: false,
-      })
-      setImageFile(null)
-      setImagePreview(null)
+      console.log("Form Data with Image:", formDataWithImage) // Debugging log
+
+      // Call the onAdd function with form data and base64 image
+      onAdd(formDataWithImage)
     } catch (error) {
       console.error("Error adding menu item:", error)
       alert("Failed to add menu item. Please try again.")

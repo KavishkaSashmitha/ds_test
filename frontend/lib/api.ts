@@ -160,6 +160,7 @@ export interface SpecialHours {
 export interface Order {
   _id?: string;
   customerId: string;
+  customerName?: string; // Add this property to represent the customer's name
   restaurantId: string;
   items: OrderItem[];
   status: OrderStatus;
@@ -385,8 +386,10 @@ export const restaurantApi = {
   getMenuItems: (restaurantId: string) => 
     api.get<MenuItem[]>(`/menus/restaurant/${restaurantId}`),
   
-  createMenuItem: (data: Partial<MenuItem>) => 
-    api.post<MenuItem>("/menus", data),
+  createMenuItem: (data: Partial<MenuItem>) => {
+    console.log("Sending Menu Item Data:", data); // Debugging log
+    return api.post<MenuItem>("/menus", data);
+  },
   
   updateMenuItem: (id: string, data: Partial<MenuItem>) => 
     api.put<MenuItem>(`/menus/${id}`, data),

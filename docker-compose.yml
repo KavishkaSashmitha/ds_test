@@ -58,6 +58,7 @@ services:
     ports:
       - "3003:3003"
     environment:
+      - PORT=3003
       - MONGODB_URI=mongodb+srv://Kavishka2:TO4lfbskwvdi5eRF@fooddelivery.ouayq.mongodb.net/?retryWrites=true&w=majority&appName=fooddelivery
       - JWT_SECRET=your_secret_key_here
       - NODE_ENV=development
@@ -68,6 +69,12 @@ services:
       - mongo
     networks:
       - microservices_network
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:3003/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
 
   # Delivery Service
   delivery-service:

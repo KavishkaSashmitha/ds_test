@@ -162,7 +162,7 @@ export default function RestaurantMenu() {
         description: newItem.description,
         price: parseFloat(newItem.price),
         category: newItem.category,
-        image: "/placeholder.svg?height=100&width=100", // Default image
+        image: newItem.image, // Default image
         isAvailable: true,
         featured: false,
         isVegetarian: newItem.isVegetarian || false,

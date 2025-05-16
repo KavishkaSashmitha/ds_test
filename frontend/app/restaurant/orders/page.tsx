@@ -29,21 +29,18 @@ const orderStatuses: OrderStatusOption[] = [
   { id: "cancelled", name: "Cancelled" },
 ];
 
-// Interface for the format expected by OrderCard component
-interface FormattedOrder {
-  id: string;
-  customerName: string;
-  items: {
-    name: string;
-    quantity: number;
-    price: number;
-  }[];
-  total: number;
-  status: string;
-  time: string;
-  address: string;
-  phone: string;
-}
+const formatOrderForCard = (order: Order) => {
+  return {
+    id: order._id || "Unknown Order",
+    customerName: order.customerName || "Unknown Customer",
+    items: order.items,
+    total: order.total,
+    status: order.status,
+    time: new Date(order.createdAt || Date.now()).toLocaleString(),
+    address: `${order.deliveryAddress.street}, ${order.deliveryAddress.city}`,
+    phone: "Contact through app",
+  };
+};
 
 export default function RestaurantOrders() {
   const { user } = useAuth();
@@ -55,7 +52,7 @@ export default function RestaurantOrders() {
   const [error, setError] = useState<string | null>(null);
   const [restaurantId, setRestaurantId] = useState<string | null>(null);
 
-  // First fetch the restaurant ID for the current user
+  // Fetch restaurant ID for the current user
   useEffect(() => {
     if (!user?._id) return;
 
@@ -83,16 +80,17 @@ export default function RestaurantOrders() {
     fetchRestaurantId();
   }, [user, toast]);
 
-  // Then fetch orders once we have the restaurant ID
+  // Fetch orders once we have the restaurant ID
   useEffect(() => {
     if (!restaurantId) return;
 
     const fetchOrders = async () => {
       try {
         setLoading(true);
-        // Correct the API endpoint for fetching orders
-        const response = await orderApi.getRestaurantOrders(`order/restaurants/${restaurantId}/orders`, {
+        const response = await orderApi.getRestaurantOrders(restaurantId, {
           status: activeTab !== "all" ? (activeTab as OrderStatus) : undefined,
+          page: 1,
+          limit: 50,
         });
 
         setOrders(response.data.orders || []);
@@ -113,65 +111,25 @@ export default function RestaurantOrders() {
     fetchOrders();
   }, [restaurantId, activeTab, toast]);
 
-  // Filter orders based on search query
+  // Filter orders based on active tab and search query
   const filteredOrders = orders.filter((order) => {
-    return (
+    const matchesStatus = activeTab === "all" || order.status === activeTab;
+    const matchesSearch =
       order._id?.toLowerCase().includes(searchQuery.toLowerCase()) ||
-      order.customerId?.toLowerCase().includes(searchQuery.toLowerCase())
-    );
+      order.customerName?.toLowerCase().includes(searchQuery.toLowerCase());
+    return matchesStatus && matchesSearch;
   });
 
-  // Update order status
-  const updateOrderStatus = async (orderId: string, newStatus: OrderStatus) => {
-    try {
-      await orderApi.updateOrderStatus(orderId, newStatus);
+  // Update order status locally
+  const updateOrderStatus = (orderId: string, newStatus: OrderStatus) => {
+    setOrders((prevOrders) =>
+      prevOrders.map((order) => (order._id === orderId ? { ...order, status: newStatus } : order))
+    );
 
-      if (!restaurantId) {
-        toast({
-          title: "Error",
-          description: "Restaurant information is missing. Please refresh the page.",
-          variant: "destructive",
-        });
-        return;
-      }
-
-      // Refresh the orders list
-      const response = await orderApi.getRestaurantOrders(restaurantId, {
-        status: activeTab !== "all" ? (activeTab as OrderStatus) : undefined,
-      });
-
-      setOrders(response.data.orders || []);
-
-      toast({
-        title: "Status Updated",
-        description: "Order status has been successfully updated.",
-      });
-    } catch (err: any) {
-      console.error("Failed to update order status:", err);
-      toast({
-        title: "Error",
-        description: "Could not update order status. Please try again.",
-        variant: "destructive",
-      });
-    }
-  };
-
-  // Format order data for the OrderCard component
-  const formatOrderForCard = (order: Order): FormattedOrder => {
-    return {
-      id: order._id || "",
-      customerName: `Customer ${order.customerId.substring(0, 8)}...`, // Using shortened ID for demo
-      items: order.items.map((item) => ({
-        name: item.name,
-        quantity: item.quantity,
-        price: item.price,
-      })),
-      total: order.total,
-      status: order.status,
-      time: new Date(order.createdAt || Date.now()).toLocaleString(),
-      address: `${order.deliveryAddress.street}, ${order.deliveryAddress.city}`,
-      phone: "Contact through app", // For privacy reasons, use generic text
-    };
+    toast({
+      title: "Status Updated",
+      description: `Order status has been updated to ${newStatus}.`,
+    });
   };
 
   return (
@@ -185,7 +143,7 @@ export default function RestaurantOrders() {
         <div className="relative flex-1">
           <Search className="absolute left-2.5 top-2.5 h-4 w-4 text-muted-foreground" />
           <Input
-            placeholder="Search by order ID or customer ID..."
+            placeholder="Search by order ID or customer name..."
             className="pl-8"
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
@@ -195,7 +153,7 @@ export default function RestaurantOrders() {
       </div>
 
       <Tabs defaultValue="all" value={activeTab} onValueChange={setActiveTab}>
-        <TabsList className="mb-4 flex flex-wrap">
+        <TabsList className="mb-4">
           {orderStatuses.map((status) => (
             <TabsTrigger key={status.id} value={status.id}>
               {status.name}
@@ -219,13 +177,9 @@ export default function RestaurantOrders() {
           ) : filteredOrders.length === 0 ? (
             <Card>
               <CardContent className="flex flex-col items-center justify-center py-10">
-                <p className="mb-2 text-center text-lg font-medium">
-                  No orders found
-                </p>
+                <p className="mb-2 text-center text-lg font-medium">No orders found</p>
                 <p className="text-center text-muted-foreground">
-                  {searchQuery
-                    ? "Try a different search term"
-                    : "You don't have any orders in this category"}
+                  {searchQuery ? "Try a different search term" : "You don't have any orders yet"}
                 </p>
               </CardContent>
             </Card>
