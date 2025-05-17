@@ -82,3 +82,5 @@
 {"level":"error","message":"Update order status error: Cast to ObjectId failed for value \"Ramen\" (type string) at path \"_id\" for model \"Order\"","service":"order-service","timestamp":"2025-05-15 07:58:33"}
 {"level":"error","message":"Update order status error: Cast to ObjectId failed for value \"Ramen\" (type string) at path \"_id\" for model \"Order\"","service":"order-service","timestamp":"2025-05-16 04:16:51"}
 {"level":"error","message":"Failed to notify restaurant service: Invalid URL","service":"order-service","timestamp":"2025-05-16 05:09:52"}
+{"level":"error","message":"Accept order error: Cast to ObjectId failed for value \"mock-1\" (type string) at path \"_id\" for model \"Order\"","service":"order-service","timestamp":"2025-05-17 07:08:46"}
+{"level":"error","message":"Accept order error: Cast to ObjectId failed for value \"mock-1\" (type string) at path \"_id\" for model \"Order\"","service":"order-service","timestamp":"2025-05-17 07:17:10"}

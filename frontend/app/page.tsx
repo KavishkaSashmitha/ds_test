@@ -32,6 +32,15 @@ export default function Page() {
             </a>
           </nav>
           <div className="flex items-center gap-4">
+            <Link href="/test">
+              <Button
+                variant="outline"
+                className="text-sm flex items-center gap-1"
+              >
+                <UtensilsCrossed className="h-4 w-4" />
+                Demo Tests
+              </Button>
+            </Link>
             <Link href="/login">
               <Button variant="ghost" className="text-sm">
                 Login
@@ -72,6 +81,18 @@ export default function Page() {
                 <Link href="/register/restaurant">
                   <Button size="lg" variant="outline">
                     Register Your Restaurant
+                  </Button>
+                </Link>
+              </div>
+              <div className="flex flex-col gap-4 sm:flex-row sm:justify-center md:justify-start mt-4">
+                <Link href="/test-tracking">
+                  <Button size="sm" variant="link" className="text-orange-500">
+                    Try Location Tracking Demo
+                  </Button>
+                </Link>
+                <Link href="/test-orders">
+                  <Button size="sm" variant="link" className="text-orange-500">
+                    Try Order Pickup Demo
                   </Button>
                 </Link>
               </div>

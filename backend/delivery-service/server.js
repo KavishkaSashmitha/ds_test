@@ -9,6 +9,8 @@ const logger = require("./utils/logger")
 const deliveryRoutes = require("./routes/deliveryRoutes")
 const locationRoutes = require("./routes/locationRoutes")
 const earningsRoutes = require("./routes/earningsRoutes")
+const mockOrderRoutes = require("./routes/mockOrderRoutes")
+const mockLocationRoutes = require("./routes/mockLocationRoutes")
 const socketHandler = require("./utils/socketHandler")
 
 // Load environment variables

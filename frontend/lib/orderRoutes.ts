@@ -95,7 +95,7 @@ export const orderRoutes = {
   }) => {
     const url = deliveryPersonId 
       ? `/orders/delivery/${deliveryPersonId}` 
-      : '/orders/delivery';
+      : '/orders/ready-for-pickup';
     return api.get<OrdersResponse>(url, { params });
   },
   

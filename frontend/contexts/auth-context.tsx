@@ -107,7 +107,7 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
     if (role === "restaurant") {
       router.push("/restaurant/setup");
     } else if (role === "delivery") {
-      router.push("/delivery/setup");
+      router.push("/delivery/dashboard");
     }
   };
 

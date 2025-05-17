@@ -119,6 +119,8 @@ const createProxyConfig = (targetUrl, pathRewrite = {}) => ({
     // Ensure CORS headers are preserved
     proxyRes.headers['Access-Control-Allow-Origin'] = req.headers.origin || '*';
     proxyRes.headers['Access-Control-Allow-Credentials'] = 'true';
+    proxyRes.headers['Access-Control-Allow-Methods'] = 'GET,HEAD,PUT,PATCH,POST,DELETE';
+    proxyRes.headers['Access-Control-Allow-Headers'] = 'Content-Type, Authorization';
   },
   onError: (err, req, res) => {
     logger.error(`Proxy error: ${err.message}`);
@@ -286,6 +288,27 @@ app.use('/delivery', authenticate, createProxyMiddleware({
   }
 }));
 
+// Mock routes for testing (no auth required)
+app.use('/mock', createProxyMiddleware({
+  ...createProxyConfig(serviceUrls.delivery),
+  pathRewrite: {
+    '^/mock': '/mock'  // Keep the /mock prefix when forwarding
+  },
+  onProxyReq: (proxyReq, req, res) => {
+    logger.info(`Proxying request to Mock Service: ${req.method} ${req.originalUrl}`);
+    
+    // If there's a JSON body, we need to rewrite it
+    if (req.body && Object.keys(req.body).length > 0 && 
+        req.headers['content-type']?.includes('application/json')) {
+      const bodyData = JSON.stringify(req.body);
+      proxyReq.setHeader('Content-Type', 'application/json');
+      proxyReq.setHeader('Content-Length', Buffer.byteLength(bodyData));
+      // Write the body to the proxied request
+      proxyReq.write(bodyData);
+    }
+  }
+}));
+
 const PORT = process.env.PORT || 8080;
 app.listen(PORT, () => {
   logger.info(`API Gateway running on port ${PORT} in ${ENV} mode`);
@@ -296,5 +319,6 @@ app.listen(PORT, () => {
   logger.info(`  /orders -> ${serviceUrls.order}`); // Added order service to logs
   logger.info(`  /payments -> ${serviceUrls.order}`); // Added payment service to logs
   logger.info(`  /delivery -> ${serviceUrls.delivery}`);
+  logger.info(`  /mock -> ${serviceUrls.delivery}/mock`); // Added mock routes
   logger.info('  /health - API Gateway health check');
 });
