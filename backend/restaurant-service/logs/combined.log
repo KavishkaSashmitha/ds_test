@@ -6442,3 +6442,17 @@
 {"level":"info","message":"::1 - - [17/May/2025:06:30:22 +0000] \"GET /health HTTP/1.1\" 200 57 \"-\" \"Wget\"","service":"restaurant-service","timestamp":"2025-05-17 06:30:22"}
 {"level":"info","message":"::1 - - [17/May/2025:06:30:52 +0000] \"GET /health HTTP/1.1\" 200 57 \"-\" \"Wget\"","service":"restaurant-service","timestamp":"2025-05-17 06:30:52"}
 {"level":"info","message":"::1 - - [17/May/2025:06:31:22 +0000] \"GET /health HTTP/1.1\" 200 57 \"-\" \"Wget\"","service":"restaurant-service","timestamp":"2025-05-17 06:31:22"}
+{"level":"info","message":"::1 - - [17/May/2025:06:31:52 +0000] \"GET /health HTTP/1.1\" 200 57 \"-\" \"Wget\"","service":"restaurant-service","timestamp":"2025-05-17 06:31:52"}
+{"level":"info","message":"::1 - - [17/May/2025:06:32:22 +0000] \"GET /health HTTP/1.1\" 200 57 \"-\" \"Wget\"","service":"restaurant-service","timestamp":"2025-05-17 06:32:22"}
+{"level":"info","message":"::1 - - [17/May/2025:06:32:52 +0000] \"GET /health HTTP/1.1\" 200 57 \"-\" \"Wget\"","service":"restaurant-service","timestamp":"2025-05-17 06:32:52"}
+{"level":"info","message":"::1 - - [17/May/2025:06:33:22 +0000] \"GET /health HTTP/1.1\" 200 57 \"-\" \"Wget\"","service":"restaurant-service","timestamp":"2025-05-17 06:33:22"}
+{"level":"info","message":"::ffff:172.22.0.2 - - [17/May/2025:06:33:49 +0000] \"GET /restaurants/owner/me HTTP/1.1\" 200 1512 \"http://localhost:3000/\" \"Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:138.0) Gecko/20100101 Firefox/138.0\"","service":"restaurant-service","timestamp":"2025-05-17 06:33:49"}
+{"level":"info","message":"::ffff:172.22.0.2 - - [17/May/2025:06:33:49 +0000] \"GET /restaurants/owner/me HTTP/1.1\" 304 - \"http://localhost:3000/\" \"Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:138.0) Gecko/20100101 Firefox/138.0\"","service":"restaurant-service","timestamp":"2025-05-17 06:33:49"}
+{"level":"info","message":"::ffff:172.22.0.2 - - [17/May/2025:06:33:50 +0000] \"GET /restaurants/owner/me HTTP/1.1\" 304 - \"http://localhost:3000/\" \"Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:138.0) Gecko/20100101 Firefox/138.0\"","service":"restaurant-service","timestamp":"2025-05-17 06:33:50"}
+{"level":"info","message":"::ffff:172.22.0.2 - - [17/May/2025:06:33:50 +0000] \"GET /restaurants/owner/me HTTP/1.1\" 200 1512 \"http://localhost:3000/\" \"Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:138.0) Gecko/20100101 Firefox/138.0\"","service":"restaurant-service","timestamp":"2025-05-17 06:33:50"}
+{"level":"info","message":"::1 - - [17/May/2025:06:33:52 +0000] \"GET /health HTTP/1.1\" 200 57 \"-\" \"Wget\"","service":"restaurant-service","timestamp":"2025-05-17 06:33:52"}
+{"level":"info","message":"::1 - - [17/May/2025:06:34:23 +0000] \"GET /health HTTP/1.1\" 200 57 \"-\" \"Wget\"","service":"restaurant-service","timestamp":"2025-05-17 06:34:23"}
+{"level":"info","message":"::1 - - [17/May/2025:06:34:53 +0000] \"GET /health HTTP/1.1\" 200 57 \"-\" \"Wget\"","service":"restaurant-service","timestamp":"2025-05-17 06:34:53"}
+{"level":"info","message":"::1 - - [17/May/2025:06:35:23 +0000] \"GET /health HTTP/1.1\" 200 57 \"-\" \"Wget\"","service":"restaurant-service","timestamp":"2025-05-17 06:35:23"}
+{"level":"info","message":"::1 - - [17/May/2025:06:35:53 +0000] \"GET /health HTTP/1.1\" 200 57 \"-\" \"Wget\"","service":"restaurant-service","timestamp":"2025-05-17 06:35:53"}
+{"level":"info","message":"::1 - - [17/May/2025:06:36:23 +0000] \"GET /health HTTP/1.1\" 200 57 \"-\" \"Wget\"","service":"restaurant-service","timestamp":"2025-05-17 06:36:23"}

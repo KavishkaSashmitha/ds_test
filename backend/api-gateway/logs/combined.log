@@ -10681,3 +10681,26 @@
 {"level":"info","message":"GET /health","service":"api-gateway","timestamp":"2025-05-17 06:30:22"}
 {"level":"info","message":"GET /health","service":"api-gateway","timestamp":"2025-05-17 06:30:52"}
 {"level":"info","message":"GET /health","service":"api-gateway","timestamp":"2025-05-17 06:31:22"}
+{"level":"info","message":"GET /health","service":"api-gateway","timestamp":"2025-05-17 06:31:52"}
+{"level":"info","message":"GET /health","service":"api-gateway","timestamp":"2025-05-17 06:32:22"}
+{"level":"info","message":"GET /health","service":"api-gateway","timestamp":"2025-05-17 06:32:52"}
+{"level":"info","message":"GET /health","service":"api-gateway","timestamp":"2025-05-17 06:33:22"}
+{"level":"info","message":"GET /auth/users/profile","service":"api-gateway","timestamp":"2025-05-17 06:33:48"}
+{"level":"info","message":"Proxying request to Auth Service: GET /auth/users/profile","service":"api-gateway","timestamp":"2025-05-17 06:33:48"}
+{"level":"info","message":"Received response from Auth Service: 304","service":"api-gateway","timestamp":"2025-05-17 06:33:48"}
+{"level":"info","message":"GET /restaurants/owner/me","service":"api-gateway","timestamp":"2025-05-17 06:33:48"}
+{"level":"info","message":"Proxying request to Restaurant Service: GET /restaurants/owner/me","service":"api-gateway","timestamp":"2025-05-17 06:33:48"}
+{"level":"info","message":"GET /restaurants/owner/me","service":"api-gateway","timestamp":"2025-05-17 06:33:48"}
+{"level":"info","message":"Proxying request to Restaurant Service: GET /restaurants/owner/me","service":"api-gateway","timestamp":"2025-05-17 06:33:48"}
+{"level":"info","message":"GET /restaurants/owner/me","service":"api-gateway","timestamp":"2025-05-17 06:33:50"}
+{"level":"info","message":"Proxying request to Restaurant Service: GET /restaurants/owner/me","service":"api-gateway","timestamp":"2025-05-17 06:33:50"}
+{"level":"info","message":"GET /restaurants/owner/me","service":"api-gateway","timestamp":"2025-05-17 06:33:50"}
+{"level":"info","message":"Proxying request to Restaurant Service: GET /restaurants/owner/me","service":"api-gateway","timestamp":"2025-05-17 06:33:50"}
+{"level":"info","message":"GET /orders/restaurant/6818f27a0bf0b47d911b36f1?page=1&limit=50","service":"api-gateway","timestamp":"2025-05-17 06:33:50"}
+{"level":"info","message":"Proxying request to Order Service: GET /orders/restaurant/6818f27a0bf0b47d911b36f1?page=1&limit=50","service":"api-gateway","timestamp":"2025-05-17 06:33:50"}
+{"level":"info","message":"GET /health","service":"api-gateway","timestamp":"2025-05-17 06:33:52"}
+{"level":"info","message":"GET /health","service":"api-gateway","timestamp":"2025-05-17 06:34:23"}
+{"level":"info","message":"GET /health","service":"api-gateway","timestamp":"2025-05-17 06:34:53"}
+{"level":"info","message":"GET /health","service":"api-gateway","timestamp":"2025-05-17 06:35:23"}
+{"level":"info","message":"GET /health","service":"api-gateway","timestamp":"2025-05-17 06:35:53"}
+{"level":"info","message":"GET /health","service":"api-gateway","timestamp":"2025-05-17 06:36:23"}

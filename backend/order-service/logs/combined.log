@@ -619,3 +619,4 @@
 {"level":"info","message":"GET /customer?page=1&limit=20","service":"order-service","timestamp":"2025-05-17 06:23:39"}
 {"level":"error","message":"Get order error: Cast to ObjectId failed for value \"customer\" (type string) at path \"_id\" for model \"Order\"","service":"order-service","timestamp":"2025-05-17 06:23:39"}
 {"level":"info","message":"GET /restaurant/6818f27a0bf0b47d911b36f1?page=1&limit=50","service":"order-service","timestamp":"2025-05-17 06:26:11"}
+{"level":"info","message":"GET /restaurant/6818f27a0bf0b47d911b36f1?page=1&limit=50","service":"order-service","timestamp":"2025-05-17 06:33:50"}

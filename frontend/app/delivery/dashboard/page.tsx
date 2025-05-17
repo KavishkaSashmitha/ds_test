@@ -13,8 +13,6 @@ import {
 
 import { useAuth } from "@/contexts/auth-context";
 import { DeliveryOrder, useDelivery } from "@/contexts/delivery-context";
-import { orderApi } from "@/lib/api";
-import { useToast } from "@/hooks/use-toast";
 
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
@@ -42,7 +40,6 @@ interface DeliveryOrderCardProps {
 
 export default function DeliveryDashboard() {
   const { user } = useAuth();
-  const { toast } = useToast();
   const {
     status,
     setStatus,
@@ -56,9 +53,6 @@ export default function DeliveryDashboard() {
   } = useDelivery();
   const [activeTab, setActiveTab] = useState("available");
   const [selectedOrderId, setSelectedOrderId] = useState<string | null>(null);
-  const [restaurantOrders, setRestaurantOrders] = useState<DeliveryOrder[]>([]);
-  const [loadingRestaurantOrders, setLoadingRestaurantOrders] =
-    useState<boolean>(false);
 
   // Filter orders by distance
   const nearbyOrders = availableOrders.filter((order) => order.distance <= 5);

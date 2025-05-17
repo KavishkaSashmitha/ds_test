@@ -1,24 +1,16 @@
-"use client";
+"use client"
 
-import { useState } from "react";
-import Link from "next/link";
-import { usePathname } from "next/navigation";
-import {
-  BarChart3,
-  Clock,
-  Home,
-  Menu,
-  Package,
-  Store,
-  User,
-} from "lucide-react";
+import { useState } from "react"
+import Link from "next/link"
+import { usePathname } from "next/navigation"
+import { BarChart3, Clock, Home, Menu, Package, User } from "lucide-react"
 
-import { useAuth } from "@/contexts/auth-context";
-import { useDelivery } from "@/contexts/delivery-context";
-import { Button } from "@/components/ui/button";
-import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
-import { Switch } from "@/components/ui/switch";
-import { Label } from "@/components/ui/label";
+import { useAuth } from "@/contexts/auth-context"
+import { useDelivery } from "@/contexts/delivery-context"
+import { Button } from "@/components/ui/button"
+import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet"
+import { Switch } from "@/components/ui/switch"
+import { Label } from "@/components/ui/label"
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -26,45 +18,24 @@ import {
   DropdownMenuLabel,
   DropdownMenuSeparator,
   DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu";
+} from "@/components/ui/dropdown-menu"
 
 export function DeliveryNavbar() {
-  const pathname = usePathname();
-  const { user, logout } = useAuth();
-  const { status, setStatus, currentOrder } = useDelivery();
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const pathname = usePathname()
+  const { user, logout } = useAuth()
+  const { status, setStatus, currentOrder } = useDelivery()
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
 
   const navLinks = [
-    {
-      href: "/delivery/dashboard",
-      label: "Dashboard",
-      icon: <Home className="h-5 w-5" />,
-    },
-    {
-      href: "/delivery/restaurant-orders",
-      label: "Restaurant Orders",
-      icon: <Store className="h-5 w-5" />,
-    },
-    {
-      href: "/delivery/orders",
-      label: "My Orders",
-      icon: <Package className="h-5 w-5" />,
-    },
-    {
-      href: "/delivery/earnings",
-      label: "Earnings",
-      icon: <BarChart3 className="h-5 w-5" />,
-    },
-    {
-      href: "/delivery/history",
-      label: "History",
-      icon: <Clock className="h-5 w-5" />,
-    },
-  ];
+    { href: "/delivery/dashboard", label: "Dashboard", icon: <Home className="h-5 w-5" /> },
+    { href: "/delivery/orders", label: "Orders", icon: <Package className="h-5 w-5" /> },
+    { href: "/delivery/earnings", label: "Earnings", icon: <BarChart3 className="h-5 w-5" /> },
+    { href: "/delivery/history", label: "History", icon: <Clock className="h-5 w-5" /> },
+  ]
 
   const handleStatusChange = (checked: boolean) => {
-    setStatus(checked ? "available" : "offline");
-  };
+    setStatus(checked ? "available" : "offline")
+  }
 
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-white shadow-sm">
@@ -103,11 +74,7 @@ export function DeliveryNavbar() {
               disabled={!!currentOrder}
             />
             <Label htmlFor="online-mode" className="font-medium">
-              {status === "offline"
-                ? "Offline"
-                : status === "busy"
-                ? "Busy"
-                : "Online"}
+              {status === "offline" ? "Offline" : status === "busy" ? "Busy" : "Online"}
             </Label>
           </div>
 
@@ -144,9 +111,7 @@ export function DeliveryNavbar() {
                 <div className="flex items-center gap-2">
                   <Package className="h-6 w-6 text-orange-500" />
                   <span className="text-xl font-bold">FoodExpress</span>
-                  <span className="text-sm font-medium text-gray-500">
-                    Driver
-                  </span>
+                  <span className="text-sm font-medium text-gray-500">Driver</span>
                 </div>
 
                 <div className="flex items-center gap-2">
@@ -157,11 +122,7 @@ export function DeliveryNavbar() {
                     disabled={!!currentOrder}
                   />
                   <Label htmlFor="mobile-online-mode" className="font-medium">
-                    {status === "offline"
-                      ? "Offline"
-                      : status === "busy"
-                      ? "Busy"
-                      : "Online"}
+                    {status === "offline" ? "Offline" : status === "busy" ? "Busy" : "Online"}
                   </Label>
                 </div>
 
@@ -171,9 +132,7 @@ export function DeliveryNavbar() {
                       key={link.href}
                       href={link.href}
                       className={`flex items-center gap-2 text-sm font-medium transition-colors hover:text-orange-500 ${
-                        pathname === link.href
-                          ? "text-orange-500"
-                          : "text-gray-600"
+                        pathname === link.href ? "text-orange-500" : "text-gray-600"
                       }`}
                       onClick={() => setIsMobileMenuOpen(false)}
                     >
@@ -193,5 +152,5 @@ export function DeliveryNavbar() {
         </div>
       </div>
     </header>
-  );
+  )
 }
