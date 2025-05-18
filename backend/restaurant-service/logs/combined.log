@@ -6456,3 +6456,4 @@
 {"level":"info","message":"::1 - - [17/May/2025:06:35:23 +0000] \"GET /health HTTP/1.1\" 200 57 \"-\" \"Wget\"","service":"restaurant-service","timestamp":"2025-05-17 06:35:23"}
 {"level":"info","message":"::1 - - [17/May/2025:06:35:53 +0000] \"GET /health HTTP/1.1\" 200 57 \"-\" \"Wget\"","service":"restaurant-service","timestamp":"2025-05-17 06:35:53"}
 {"level":"info","message":"::1 - - [17/May/2025:06:36:23 +0000] \"GET /health HTTP/1.1\" 200 57 \"-\" \"Wget\"","service":"restaurant-service","timestamp":"2025-05-17 06:36:23"}
+{"level":"error","message":"Get restaurant error: Cast to ObjectId failed for value \"invalid-id\" (type string) at path \"_id\" for model \"Restaurant\"","service":"restaurant-service","timestamp":"2025-05-18 10:34:09"}
