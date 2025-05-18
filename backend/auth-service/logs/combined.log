@@ -5283,3 +5283,73 @@
 {"level":"info","message":"::1 - - [17/May/2025:06:35:23 +0000] \"GET /health HTTP/1.1\" 200 51 \"-\" \"Wget\"","service":"auth-service","timestamp":"2025-05-17 06:35:23"}
 {"level":"info","message":"::1 - - [17/May/2025:06:35:53 +0000] \"GET /health HTTP/1.1\" 200 51 \"-\" \"Wget\"","service":"auth-service","timestamp":"2025-05-17 06:35:53"}
 {"level":"info","message":"::1 - - [17/May/2025:06:36:23 +0000] \"GET /health HTTP/1.1\" 200 51 \"-\" \"Wget\"","service":"auth-service","timestamp":"2025-05-17 06:36:23"}
+{"level":"error","message":"Authentication error: secret or public key must be provided","service":"auth-service","timestamp":"2025-05-18 07:24:53"}
+{"level":"error","message":"Authentication error: jwt malformed","service":"auth-service","timestamp":"2025-05-18 07:24:53"}
+{"level":"error","message":"Authentication error: secret or public key must be provided","service":"auth-service","timestamp":"2025-05-18 07:24:53"}
+{"level":"error","message":"Authentication error: secret or public key must be provided","service":"auth-service","timestamp":"2025-05-18 07:24:53"}
+{"level":"error","message":"Authentication error: secret or public key must be provided","service":"auth-service","timestamp":"2025-05-18 07:24:53"}
+{"level":"error","message":"Authentication error: secret or public key must be provided","service":"auth-service","timestamp":"2025-05-18 07:24:53"}
+{"level":"error","message":"Authentication error: secret or public key must be provided","service":"auth-service","timestamp":"2025-05-18 07:24:53"}
+{"level":"error","message":"Authentication error: secret or public key must be provided","service":"auth-service","timestamp":"2025-05-18 07:24:53"}
+{"level":"error","message":"Authentication error: secret or public key must be provided","service":"auth-service","timestamp":"2025-05-18 07:24:53"}
+{"level":"error","message":"Authentication error: secret or public key must be provided","service":"auth-service","timestamp":"2025-05-18 07:24:54"}
+{"level":"error","message":"Authentication error: secret or public key must be provided","service":"auth-service","timestamp":"2025-05-18 07:24:54"}
+{"level":"error","message":"Authentication error: secret or public key must be provided","service":"auth-service","timestamp":"2025-05-18 07:24:55"}
+{"level":"error","message":"Authentication error: secret or public key must be provided","service":"auth-service","timestamp":"2025-05-18 07:24:55"}
+{"level":"error","message":"Authentication error: secret or public key must be provided","service":"auth-service","timestamp":"2025-05-18 07:24:55"}
+{"level":"error","message":"Authentication error: secret or public key must be provided","service":"auth-service","timestamp":"2025-05-18 07:24:55"}
+{"level":"error","message":"Authentication error: secret or public key must be provided","service":"auth-service","timestamp":"2025-05-18 07:24:55"}
+{"level":"error","message":"Authentication error: secret or public key must be provided","service":"auth-service","timestamp":"2025-05-18 07:24:55"}
+{"level":"error","message":"Authentication error: secret or public key must be provided","service":"auth-service","timestamp":"2025-05-18 07:24:55"}
+{"level":"error","message":"Authentication error: secret or public key must be provided","service":"auth-service","timestamp":"2025-05-18 07:24:56"}
+{"level":"error","message":"Registration error: secretOrPrivateKey must have a value","service":"auth-service","timestamp":"2025-05-18 07:24:57"}
+{"level":"error","message":"Registration error: secretOrPrivateKey must have a value","service":"auth-service","timestamp":"2025-05-18 07:24:57"}
+{"level":"error","message":"Registration error: secretOrPrivateKey must have a value","service":"auth-service","timestamp":"2025-05-18 07:24:58"}
+{"level":"error","message":"Registration error: secretOrPrivateKey must have a value","service":"auth-service","timestamp":"2025-05-18 07:24:58"}
+{"level":"error","message":"Login error: secretOrPrivateKey must have a value","service":"auth-service","timestamp":"2025-05-18 07:24:58"}
+{"level":"error","message":"Registration error: secretOrPrivateKey must have a value","service":"auth-service","timestamp":"2025-05-18 07:24:58"}
+{"level":"error","message":"Registration error: secretOrPrivateKey must have a value","service":"auth-service","timestamp":"2025-05-18 07:24:58"}
+{"level":"error","message":"Authentication error: secret or public key must be provided","service":"auth-service","timestamp":"2025-05-18 07:25:00"}
+{"level":"error","message":"Authentication error: secret or public key must be provided","service":"auth-service","timestamp":"2025-05-18 07:25:01"}
+{"level":"error","message":"Authentication error: jwt malformed","service":"auth-service","timestamp":"2025-05-18 07:25:01"}
+{"level":"error","message":"Authentication error: secret or public key must be provided","service":"auth-service","timestamp":"2025-05-18 07:25:01"}
+{"level":"error","message":"Authentication error: jwt expired","service":"auth-service","timestamp":"2025-05-18 07:27:01"}
+{"level":"error","message":"Authentication error: jwt malformed","service":"auth-service","timestamp":"2025-05-18 07:27:01"}
+{"level":"error","message":"Authentication error: jwt malformed","service":"auth-service","timestamp":"2025-05-18 07:27:13"}
+{"level":"error","message":"Add address error: Cannot read properties of undefined (reading 'forEach')","service":"auth-service","timestamp":"2025-05-18 07:27:14"}
+{"level":"error","message":"Add address error: Cannot read properties of undefined (reading 'push')","service":"auth-service","timestamp":"2025-05-18 07:27:14"}
+{"level":"error","message":"Delete address error: Cannot read properties of undefined (reading 'findIndex')","service":"auth-service","timestamp":"2025-05-18 07:27:14"}
+{"level":"error","message":"Error registering with service: getaddrinfo ENOTFOUND restaurant-service","service":"auth-service","timestamp":"2025-05-18 07:27:16"}
+{"level":"error","message":"Error registering with service: getaddrinfo ENOTFOUND delivery-service","service":"auth-service","timestamp":"2025-05-18 07:27:16"}
+{"level":"error","message":"Authentication error: jwt expired","service":"auth-service","timestamp":"2025-05-18 07:27:22"}
+{"level":"error","message":"Authentication error: jwt malformed","service":"auth-service","timestamp":"2025-05-18 07:27:22"}
+{"level":"error","message":"Authentication error: jwt malformed","service":"auth-service","timestamp":"2025-05-18 07:30:29"}
+{"level":"error","message":"Error registering with service: getaddrinfo ENOTFOUND restaurant-service","service":"auth-service","timestamp":"2025-05-18 07:30:32"}
+{"level":"error","message":"Error registering with service: getaddrinfo ENOTFOUND delivery-service","service":"auth-service","timestamp":"2025-05-18 07:30:32"}
+{"level":"error","message":"Authentication error: jwt expired","service":"auth-service","timestamp":"2025-05-18 07:30:38"}
+{"level":"error","message":"Authentication error: jwt malformed","service":"auth-service","timestamp":"2025-05-18 07:30:38"}
+{"level":"error","message":"Authentication error: jwt malformed","service":"auth-service","timestamp":"2025-05-18 07:31:41"}
+{"level":"error","message":"Error registering with service: getaddrinfo ENOTFOUND restaurant-service","service":"auth-service","timestamp":"2025-05-18 07:31:43"}
+{"level":"error","message":"Error registering with service: getaddrinfo ENOTFOUND delivery-service","service":"auth-service","timestamp":"2025-05-18 07:31:44"}
+{"level":"error","message":"Authentication error: jwt expired","service":"auth-service","timestamp":"2025-05-18 07:31:47"}
+{"level":"error","message":"Authentication error: jwt malformed","service":"auth-service","timestamp":"2025-05-18 07:31:47"}
+{"level":"error","message":"Error registering with service: getaddrinfo ENOTFOUND restaurant-service","service":"auth-service","timestamp":"2025-05-18 07:32:19"}
+{"level":"error","message":"Error registering with service: getaddrinfo ENOTFOUND delivery-service","service":"auth-service","timestamp":"2025-05-18 07:32:20"}
+{"level":"error","message":"Authentication error: jwt malformed","service":"auth-service","timestamp":"2025-05-18 07:32:22"}
+{"level":"error","message":"Authentication error: jwt expired","service":"auth-service","timestamp":"2025-05-18 07:32:25"}
+{"level":"error","message":"Authentication error: jwt malformed","service":"auth-service","timestamp":"2025-05-18 07:32:25"}
+{"level":"error","message":"Error registering with service: getaddrinfo ENOTFOUND restaurant-service","service":"auth-service","timestamp":"2025-05-18 07:34:31"}
+{"level":"error","message":"Error registering with service: getaddrinfo ENOTFOUND delivery-service","service":"auth-service","timestamp":"2025-05-18 07:34:31"}
+{"level":"error","message":"Authentication error: jwt malformed","service":"auth-service","timestamp":"2025-05-18 07:34:34"}
+{"level":"error","message":"Authentication error: jwt expired","service":"auth-service","timestamp":"2025-05-18 07:34:36"}
+{"level":"error","message":"Authentication error: jwt malformed","service":"auth-service","timestamp":"2025-05-18 07:34:36"}
+{"level":"error","message":"Error registering with service: getaddrinfo ENOTFOUND restaurant-service","service":"auth-service","timestamp":"2025-05-18 07:36:30"}
+{"level":"error","message":"Error registering with service: getaddrinfo ENOTFOUND delivery-service","service":"auth-service","timestamp":"2025-05-18 07:36:30"}
+{"level":"error","message":"Authentication error: jwt malformed","service":"auth-service","timestamp":"2025-05-18 07:36:32"}
+{"level":"error","message":"Authentication error: jwt expired","service":"auth-service","timestamp":"2025-05-18 07:36:37"}
+{"level":"error","message":"Authentication error: jwt malformed","service":"auth-service","timestamp":"2025-05-18 07:36:37"}
+{"level":"error","message":"Error registering with service: getaddrinfo ENOTFOUND restaurant-service","service":"auth-service","timestamp":"2025-05-18 07:37:11"}
+{"level":"error","message":"Error registering with service: getaddrinfo ENOTFOUND delivery-service","service":"auth-service","timestamp":"2025-05-18 07:37:11"}
+{"level":"error","message":"Authentication error: jwt malformed","service":"auth-service","timestamp":"2025-05-18 07:37:13"}
+{"level":"error","message":"Authentication error: jwt expired","service":"auth-service","timestamp":"2025-05-18 07:37:20"}
+{"level":"error","message":"Authentication error: jwt malformed","service":"auth-service","timestamp":"2025-05-18 07:37:20"}

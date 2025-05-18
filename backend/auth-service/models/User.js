@@ -1,6 +1,38 @@
 const mongoose = require("mongoose")
 const bcrypt = require("bcryptjs")
 
+const addressSchema = new mongoose.Schema({
+  name: {
+    type: String,
+    required: true,
+    trim: true,
+  },
+  address: {
+    type: String,
+    required: true,
+    trim: true,
+  },
+  city: {
+    type: String,
+    required: true,
+    trim: true,
+  },
+  state: {
+    type: String,
+    required: true,
+    trim: true,
+  },
+  zipCode: {
+    type: String,
+    required: true,
+    trim: true,
+  },
+  isDefault: {
+    type: Boolean,
+    default: false,
+  }
+})
+
 const userSchema = new mongoose.Schema({
   name: {
     type: String,
@@ -28,6 +60,7 @@ const userSchema = new mongoose.Schema({
     enum: ["customer", "restaurant", "delivery", "admin"],
     default: "customer",
   },
+  addresses: [addressSchema],
   isActive: {
     type: Boolean,
     default: true,
